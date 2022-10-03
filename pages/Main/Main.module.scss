@@ -1,0 +1,231 @@
+
+
+.main_top {
+  display: flex;
+  flex-direction: row;
+  background-color: aquamarine;
+  width: 100%;
+  height: 100vh; 
+  overflow-x: hidden;
+  .main_top_left {
+    width: 40%;
+    min-width: 50%;
+    max-width: 900px;
+    // background-color: brown;
+    padding: 80px;
+    h1 {
+      font-size: 90px;
+      margin: 0;
+      padding: 0;
+    }
+    p {
+      font-size: 30px;
+      padding: 0;
+      margin: 0;
+    }
+    .open_status {
+      background-color: green;
+      padding: 10px;
+      width: fit-content; 
+      border-radius: 10px;
+      margin: 10px 0 10px 0;
+    }
+    .close_status {
+      background-color: rgb(225, 19, 16);
+      padding: 10px;
+      width: fit-content; 
+      border-radius: 10px;
+      margin: 10px 0 10px 0;
+    }
+  }
+  .main_top_right {
+    flex-grow: 1;
+    background-color: bisque;
+  }
+}
+
+.business_hours {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  .business_hours_days {
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+    div {
+      padding: 5px 0;
+    }
+  }
+  .business_hours_times {
+    display: flex;
+    flex-direction: column;
+    div {
+      padding: 5px 0;
+    }
+  }
+}
+
+.main_services {
+  width: 100%;
+  min-height: 50vh;
+  background-color: rgb(0, 94, 255);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  .main_services_left {
+    width: 50%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    // background-color: orange;
+    padding: 80px;
+    h1 {
+      margin: 0;
+      font-size: 80px;
+    }
+  }
+  .main_services_right {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    // background-color: red;
+    padding: 80px;
+    .main_services_right_items {
+      display: flex;
+      flex-direction: row;
+      padding: 10px 0;
+      .main_services_right_items_left_icon {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+      }
+      .main_services_right_items_right_content {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        h2 {
+          font-size: 50px;
+          margin: 5px;
+        }
+        p {
+          font-size: 30px;
+          margin: 5px;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .main_top {
+    display: flex;
+    flex-direction: column;
+    background-color: aquamarine;
+    width: 100%;
+    padding-top: 80px;
+    .main_top_left {
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      width: 100%;
+      height: 100%;
+      // max-width: 900px;
+      background-color: brown;
+      padding: 0px;
+      h1 {
+        font-size: 48px;
+        margin: 0;
+        padding: 0;
+      }
+      p {
+        font-size: 20px;
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .main_top_right {
+      // flex-grow: 1;
+      background-color: bisque;
+    }
+  }
+
+  .business_hours {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    padding: 20px 0;
+    .business_hours_days {
+      display: flex;
+      flex-direction: column;
+      padding-right: 20px;
+      div {
+        padding: 5px 0;
+      }
+    }
+    .business_hours_times {
+      display: flex;
+      flex-direction: column;
+      div {
+        padding: 5px 0;
+      }
+    }
+  }
+  
+  .main_services {
+    width: 100%;
+    background-color: chartreuse;
+    display: flex;
+    flex-direction: column;
+    .main_services_left {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      background-color: orange;
+      margin: 0;
+      padding: 30px 0; 
+      h1 {
+        margin: 0;
+        padding: 0; 
+        font-size: 40px;
+      }
+    }
+    .main_services_right {
+      display: flex;
+      flex-direction: column;
+      background-color: red;
+      padding: 0px;
+      .main_services_right_items {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0;
+        .main_services_right_items_left_icon {
+          width: 50px;
+          display: flex;
+          justify-content: center;
+          padding: 10px;
+          margin: 0 10px;
+        }
+        .main_services_right_items_right_content {
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          h2 {
+            font-size: 30px;
+            margin: 5px;
+          }
+          p {
+            font-size: 20px;
+            margin: 5px;
+          }
+        }
+      }
+    }
+  }
+}

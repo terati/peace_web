@@ -1,0 +1,47 @@
+{
+  "navbar.title" : "Peace Pharmacy",
+  "navbar.services" : "Services",
+  "navbar.process" : "Process",
+  "navbar.faq" : "FAQ",
+  "navbar.lang" : "English / Chinese",
+  "main.main_top_left_h1" : "Proudly Serving You",
+  "main.main_top_left_p1" : "Your local pharmacy in the heart of Chicago's Chinatown",
+  "main.main_top_left_phone" : "Phone: (312) 842-2500",
+  "main.mon_to_fri" : "Mon - Friday",
+  "main.sat" : "Saturday",
+  "main.sun" : "Sunday",
+  "main.mon_to_fri_times" : "9AM - 5:30PM",
+  "main.sat_times" : "9AM - 1PM",
+  "main.sun_times" : "Closed",
+
+  "main.services.h1" : "Services",
+  "main.services.item1.h2" : "We accept most insurance. ",
+  "main.services.item1.p" : "For the full list of insurance accepted click Here.",
+  "main.services.item2.h2" : "OTC Drugs",
+  "main.services.item2.p" : "Over the counter drugs at an affordable price. ",
+  "main.services.item3.h2" : "Personalized Care",
+  "main.services.item3.p" : "Whether it be English, Cantonese, and Mandarin we are here to help. ",
+
+  "main.faq.h1" : "Frequently Asked Questions",
+  "main.faq.q1" : "What is your refund policy?",
+  "main.faq.d1" : "By law we cannot and do not refund prescription medication. However if you think that there was a mistake in your filled prescription please contact us immediately.",
+  "main.faq.q2" : "Can I use multiple pharmacies?",
+  "main.faq.d2" : "You can, but not encouraged. It is encouraged to pick a consistent pharmacy chain/store to utilize. Most pharmacies do not communicate with each other and use different computer systems. This can lead to potentially dangerous drug interactions between certain medications taken concurrently. An exception is the reporting of controlled substances which all pharmacies by law communicate to the US DEA(Drug Enforcement Agency). ",
+  "main.faq.q3" : "How can I transfer from another pharmacy to yours?",
+  "main.faq.d3" : "Call or visit your old pharmacy to request a Rx transfer. Provide the contact information of the desired pharmacy if they do not have it already. Ask your doctor to forward prescriptions to your new pharmacy of choice. ",
+
+  "main.process.h2" : "Process",
+  "main.process.p" : "Call use at (312) 842-2500 if you have any questions. ",
+  "main.process.left_title.h3" : "New Visitor Requirements:",
+  "main.process.left_content1" : "Insurance card(s)",
+  "main.process.left_content2" : "Identification card",
+  "main.process.left_content3" : "Paper prescription if no electronic prescription was sent",
+  "main.process.right_title.h3" : "Returning Visitor Requirements:",
+  "main.process.right_content1" : "Provide name and birthday",
+  "main.process.right_content2" : "Bring old receipts",
+  "main.process.right_content3" : "Old medication bottles",
+
+  "main.location.h2" : "Our Location",
+
+  "footer.copyright" : "© 2022 Peace Pharmacy. All Rights Reserved."
+}

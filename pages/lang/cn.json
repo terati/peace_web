@@ -1,0 +1,47 @@
+{
+  "navbar.title" : "安康藥房",
+  "navbar.services" : "服务",
+  "navbar.process" : "程序",
+  "navbar.faq" : "常问问题",
+  "navbar.lang" : "英文/中文",
+  "main.main_top_left_h1" : "自豪地为您服务",
+  "main.main_top_left_p1" : "位于芝加哥唐人街中心的当地药店",
+  "main.main_top_left_phone" : "电话: (312) 842-2500",
+  "main.mon_to_fri" : "星期一到五",
+  "main.sat" : "星期六",
+  "main.sun" : "星期日",
+  "main.mon_to_fri_times" : "9AM - 5:30PM",
+  "main.sat_times" : "9AM - 1PM",
+  "main.sun_times" : "关闭",
+
+  "main.services.h1" : "服务",
+  "main.services.item1.h2" : "我们接受大多数保险。",
+  "main.services.item1.p" : "对于接受的保险的完整列表，请单击此处。",
+  "main.services.item2.h2" : "非处方药",
+  "main.services.item2.p" : "以实惠的价格购买非处方药。",
+  "main.services.item3.h2" : "个性化护理",
+  "main.services.item3.p" : "无论是英语、粤语还是普通话，我们都可以为您提供帮助。",
+
+  "main.faq.h1" : "经常问的问题",
+  "main.faq.q1" : "你们的退款政策是什么？",
+  "main.faq.d1" : "根据法律，我们不能也不会退还处方药。 但是，如果您认为您的处方有误，请立即联系我们。",
+  "main.faq.q2" : "我可以使用多家药店吗？",
+  "main.faq.d2" : "你可以，但不鼓励。 鼓励选择一致的药房连锁店/商店来使用。 大多数药店不相互通信，使用不同的计算机系统。 这可能导致同时服用的某些药物之间存在潜在危险的药物相互作用。 一个例外是所有药店依法向美国 DEA（缉毒署）通报的受控物质报告。 ",
+  "main.faq.q3" : "我如何从其他药房转移到您的药房？",
+  "main.faq.d3" : "致电或访问您的旧药房以请求 Rx 转移。 如果他们还没有所需药房的联系信息，请提供他们的联系信息。 请您的医生将处方转发到您选择的新药房。",
+
+  "main.process.h2" : "过程",
+  "main.process.p" : "如果您有任何问题，请致电 (312) 842-2500。",
+  "main.process.left_title.h3" : "新访客要求：",
+  "main.process.left_content1" : "保险卡",
+  "main.process.left_content2" : "身份证",
+  "main.process.left_content3" : "如果未发送电子处方，则为纸质处方",
+  "main.process.right_title.h3" : "回头客要求：",
+  "main.process.right_content1" : "提供姓名和生日",
+  "main.process.right_content2" : "带上旧收据",
+  "main.process.right_content3" : "旧药瓶",
+
+  "main.location.h2" : "我们的位置",
+
+  "footer.copyright" : "© 2022 和平药房。 版权所有。"
+}

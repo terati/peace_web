@@ -1,0 +1,47 @@
+
+@media (max-width: 600px) { 
+  .navbar_ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    li {
+      float: left;
+      display: block;
+      padding: 10px 10px;
+    }
+    .item {
+      display: none;
+    }
+    .hamburger_icon {
+      display: block;
+      cursor: pointer;
+    } 
+  }
+
+  .sidebar_right {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    background-color: rgb(41, 41, 41);
+    right: 0;
+    top: 40px;
+    width: 250px;
+    transition: all .3s ease;
+    z-index: 0;
+  }
+  .sidebar_opened {
+    // width: 250px;
+    right: -250px;
+  }
+  .sidebar_closed {
+    // width: 0px;
+    right: 0;
+  }
+}
