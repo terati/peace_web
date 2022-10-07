@@ -1,0 +1,1 @@
+export { default as Blogpost_footer } from './Blogpost_footer';
