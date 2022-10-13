@@ -7,8 +7,26 @@ export const meta = {
   date: '01/21/2021',
   readTime: 4,
   author: 'FDA',
-  src: '',
-  alt: ''
+  src: '/blog_images/bp.jpg',
+  alt: 'The Who, What, Why, and How of High Blood Pressure',
+  contents: [
+    {
+      title: 'Who is affected by high blood pressure?',
+      src: 'who-is-affected-by-high-blood-pressure',
+    },
+    {
+      title: 'What is high blood pressure?',
+      src: 'what-is-high-blood-pressure',
+    },
+    {
+      title: 'Why is it important to know if you have high blood pressure?',
+      src: 'why-is-it-important-to-know-if-you-have-high-blood-pressure',
+    },
+    {
+      title: 'How can you manage your high blood pressure?',
+      src: 'how-can-you-manage-your-high-blood-pressure',
+    },
+  ],
 }
 
 ## Who is affected by high blood pressure? 
@@ -57,7 +75,7 @@ Controlling your blood pressure should be part of a healthy living plan and life
 By taking charge of your health, you can help control the silent killer. It’s all about knowing who, what, why, and how!
 
 
-export default ({ children }) => <BlogPost > {children} </BlogPost>
+export default ({ children }) => <BlogPost meta={meta}> {children} </BlogPost>
 
 
 

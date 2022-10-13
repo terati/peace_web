@@ -18,6 +18,7 @@
     "react-dom": "18.2.0",
     "react-intl": "^6.1.0",
     "react-redux": "^8.0.2",
+    "rehype-slug": "^5.0.1",
     "remark-gfm": "^3.0.1",
     "sass": "^1.54.8"
   },

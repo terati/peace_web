@@ -25,6 +25,7 @@ function BlogPost(props:BlogPost_Props_Interface) {
     children,
     meta
   } = props;
+  console.log(children);
   return (
     <>
       <title> Peace Pharmacy </title>
@@ -53,6 +54,23 @@ function BlogPost(props:BlogPost_Props_Interface) {
 
             </div>
           </article>
+        </div>
+        <div className={styles.content_sidebar}>
+          <h2> Contents </h2>
+          <div className={styles.div_inner_content_sidebar}> 
+            { meta.contents?.map((item) => {
+                return (
+                  <>
+                    <div className={styles.div_inner_content_sidebar_navigation_items}>
+                      <Link href={`#${item.src}`}>
+                        {item.title}
+                      </Link>
+                    </div>
+                  </>
+                )
+            }) }
+          </div>
+          
         </div>
         
       </div>
