@@ -1,14 +1,20 @@
+.div_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container {
   width: 100%;
-  padding: 0 100px 100px 100px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  // padding: 0 100px 100px 100px;
+  display: grid;
+  grid-template-columns: 7fr 2fr;
+  max-width: 1000px;
   // align-items: center;
 }
 
 .inner_container {
-  max-width: 800px;
+  // max-width: 800px;
   .post_title {
     font-size: 50px;
   }
@@ -28,13 +34,19 @@
   position: sticky;
   height: 100vh;
   width: 100%;
-  background-color: orange;
+  background-color: rgb(231, 231, 231);
   top: 0;
+  padding: 10px 20px;
+  margin: 10px;
   // bottom: 0;
   // left: 0;
   // right: 0;
+  h2 {
+    padding: 0;
+    margin: 0;
+  }
   .div_inner_content_sidebar_navigation_items {
-    padding: 10px 20px;
+    padding: 10px 0px;
   }
   .div_inner_content_sidebar_navigation_items:hover {
     text-decoration: underline;

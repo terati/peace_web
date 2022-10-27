@@ -2,6 +2,7 @@ import * as React from 'react';
 import styles from './Process.module.scss';
 import { FormattedMessage } from 'react-intl';
 import Checkmark_icon from './checkmark_icon';
+import Image from 'next/image';
 
 function Process() {
   const size = 30;
@@ -40,7 +41,14 @@ function Process() {
             </div>
           </div>
           <div className={styles.process_inner_wrapper_row_wrapper}> 
-            <img src={"/insurance.jpg"} />
+            <Image 
+              src={"/insurance.jpg"}
+              layout="responsive"
+              objectFit='contain'
+              width="100%"
+              height="100%"
+              alt=""
+            />
           </div>
         </div>
 
@@ -71,7 +79,12 @@ function Process() {
             </div>
           </div>
           <div className={styles.process_inner_wrapper_row_wrapper}> 
-            <img src={"/family.jpg"} />
+            <Image 
+              src={"/family.jpg"} 
+              width={"100%"}
+              height={"100%"}
+              alt=""  
+            />
           </div>
         </div>
 

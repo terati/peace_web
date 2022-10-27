@@ -30,49 +30,53 @@ function BlogPost(props:BlogPost_Props_Interface) {
     <>
       <title> Peace Pharmacy </title>
       <Blogpost_navbar />
-      <div className={styles.container}>
-        <div className={styles.inner_container}>
-          <h1 className={styles.post_title}> { meta.title } </h1>
-          <p> { meta.description } </p>
-          <p> { meta.author } </p>
-          <p> { ` ${meta.readTime}` } </p>
-          <div className={styles.main_image_wrapper}>
-            <Image 
-              src={meta.src}
-              alt={meta.alt}
-              width={100}
-              height={60}
-              layout={"responsive"}
-              className={styles.main_image}
-            />
-          </div>
-          
-          
-          <article className={styles.article}>
-            <div>
-              {children}
+      <div className={styles.div_wrapper}>
 
+        <div className={styles.container}>
+          <div className={styles.inner_container}>
+            <h1 className={styles.post_title}> { meta.title } </h1>
+            <p> { meta.description } </p>
+            <p> { meta.author } </p>
+            <p> { ` ${meta.readTime}` } </p>
+            <div className={styles.main_image_wrapper}>
+              <Image 
+                src={meta.src}
+                alt={meta.alt}
+                width={100}
+                height={60}
+                layout={"responsive"}
+                className={styles.main_image}
+              />
             </div>
-          </article>
-        </div>
-        <div className={styles.content_sidebar}>
-          <h2> Contents </h2>
-          <div className={styles.div_inner_content_sidebar}> 
-            { meta.contents?.map((item) => {
-                return (
-                  <>
-                    <div className={styles.div_inner_content_sidebar_navigation_items}>
-                      <Link href={`#${item.src}`}>
-                        {item.title}
-                      </Link>
-                    </div>
-                  </>
-                )
-            }) }
+            
+            
+            <article className={styles.article}>
+              <div>
+                {children}
+
+              </div>
+            </article>
+          </div>
+          <div className={styles.content_sidebar}>
+            
+            <div className={styles.div_inner_content_sidebar}> 
+              <h2> Contents </h2>
+              { meta.contents?.map((item) => {
+                  return (
+                    <>
+                      <div className={styles.div_inner_content_sidebar_navigation_items}>
+                        <Link href={`#${item.src}`}>
+                          {item.title}
+                        </Link>
+                      </div>
+                    </>
+                  )
+              }) }
+            </div>
+            
           </div>
           
         </div>
-        
       </div>
       <Blogpost_footer />
       

@@ -39,17 +39,20 @@ const customH1 = ({ id, ...rest }) => {
 const customH2 = ({ id, ...rest }) => {
   if (id) {
     return (
-      <Link href={`#${id}`}>
         <div className={styles.customH2}>
-          <a>
-            <h1 id={`${id}`} {...rest} />  
-          </a>
-          <div className={styles.chain}>
-            <Chain_icon fill={'white'} height={15} width={15}/>
-          </div>
+          <Link href={`#${id}`}>
+            <div className={styles.header_wrapper}>
+              <a>
+                <h1 id={`${id}`} {...rest} />  
+              </a>
+              <div className={styles.chain}>
+                <Chain_icon fill={'white'} height={15} width={15}/>
+              </div>
+            </div>
+          </Link>
         </div>
         
-      </Link>
+      
     )
   }
   return <h1 {...rest} />;
