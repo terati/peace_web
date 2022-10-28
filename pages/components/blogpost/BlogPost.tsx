@@ -5,6 +5,11 @@ import Link from 'next/link';
 import styles from './BlogPost.module.scss';
 import Image from 'next/image';
 
+type Content_Type = {
+  title: string; 
+  src: string;
+}
+
 interface Meta_Interface {
   title: string;
   description: string;
@@ -13,6 +18,7 @@ interface Meta_Interface {
   author: string;
   src: string;
   alt: string;
+  contents: Array<Content_Type>
 }
 
 interface BlogPost_Props_Interface {

@@ -19,9 +19,14 @@ import { Slideshow } from './sections/slideshow';
 import { Footer } from './sections/footer';
 import Location from './sections/location/Location';
 import Logo from './icons/Logo';
+import { RootState } from './../store/store';
+
+// type state_type = {
+//   lang?: string;
+// }
 
 function Main() {
-  const lang = useSelector(state => state.lang);
+  const lang = useSelector((state:RootState) => state.lang ?? "");
   const dispatch = useDispatch();
   const router = useRouter();
 

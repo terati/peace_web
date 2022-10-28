@@ -1,7 +1,7 @@
 import * as React from 'react';
 import styles from './Process.module.scss';
 import { FormattedMessage } from 'react-intl';
-import Checkmark_icon from './checkmark_icon';
+import Checkmark_icon from './Checkmark_icon';
 import Image from 'next/image';
 
 function Process() {

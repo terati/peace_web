@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// const inialState: language_interface {
+//   value 
+// }
+
 const langSlice = createSlice({
   name: 'lang',
   initialState: 'zh',

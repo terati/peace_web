@@ -4,7 +4,7 @@ import { FormattedMessage } from 'react-intl';
 import useInterSection from './useInterSection';
 
 function Location() {
-  const ref = React.useRef();
+  const ref = React.useRef<HTMLDivElement>(null);
   const inViewport = useInterSection(ref, '0px');
 
   React.useEffect(() => {

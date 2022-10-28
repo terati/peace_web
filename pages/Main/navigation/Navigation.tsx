@@ -4,9 +4,10 @@ import { FormattedMessage } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import Hamburger_icon from './Hamburger_icon';
+import { RootState } from '../../store/store';
 
 function Navigation() {
-  const lang = useSelector(state => state.lang);
+  const lang = useSelector((state: RootState) => state.lang);
   const [sidebar_open, set_sidebar_open] = React.useState(false);
 
   return (

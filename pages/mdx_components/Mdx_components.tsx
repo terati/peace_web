@@ -23,7 +23,7 @@ const ResponsiveImage = (props: any) => {
   )
 }
 
-const customH1 = ({ id, ...rest }) => {
+const customH1 = ({ id, ...rest }: {id?: String}) => {
   if (id) {
     return (
       <Link href={`#${id}`}>
@@ -36,7 +36,7 @@ const customH1 = ({ id, ...rest }) => {
   return <h1 {...rest} />;
 }
 
-const customH2 = ({ id, ...rest }) => {
+const customH2 = ({ id, ...rest }: {id?: String}) => {
   if (id) {
     return (
         <div className={styles.customH2}>

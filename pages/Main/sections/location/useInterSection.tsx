@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const useInterSection = (element, rootMargin) => {
+const useInterSection = (element:any, rootMargin:any) => {
   const [isVisible, set_isVisible] = React.useState(false);
 
   React.useEffect(() => {

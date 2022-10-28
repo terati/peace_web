@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import * as React from 'react';
-import Logo from '../../main/icons/Logo';
+import Logo from '../../Main/icons/Logo';
 import styles from './Blogpost_navbar.module.scss';
 
 function Blogpost_navbar() {
