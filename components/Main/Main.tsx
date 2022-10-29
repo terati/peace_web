@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Head from 'next/head';
 import styles from './Main.module.scss';
-import cn from './../lang/cn.json';
-import en from './../lang/en.json';
+import cn from '../../lang/cn.json';
+import en from '../../lang/en.json';
 import { FormattedMessage } from 'react-intl';
 import { IntlProvider } from 'react-intl'; 
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
-import { lang_toggle } from '../reducers/lang_reducer';
+import { lang_toggle } from '../../reducers/lang_reducer';
 import { useRouter } from 'next/router';
 import Care_Icon from './icons/Care_Icon';
 import Medicine_Icon from './icons/Medicine_Icon';
@@ -19,7 +19,7 @@ import { Slideshow } from './sections/slideshow';
 import { Footer } from './sections/footer';
 import Location from './sections/location/Location';
 import Logo from './icons/Logo';
-import { RootState } from './../store/store';
+import { RootState } from '../../store/store';
 
 // type state_type = {
 //   lang?: string;
