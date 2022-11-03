@@ -1,9 +1,10 @@
 
 
 .main_top {
+  box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  background-color: aquamarine;
+  // background-color: aquamarine;
   width: 100%;
   height: 100vh; 
   overflow-x: hidden;
@@ -11,28 +12,38 @@
     width: 40%;
     min-width: 50%;
     max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     // background-color: brown;
     padding: 80px;
+    .main_top_left_inner_wrapper {
+      // background-color: black;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      // border: 2px solid black;
+    }
     h1 {
-      font-size: 90px;
+      font-size: 40px;
       margin: 0;
       padding: 0;
     }
     p {
-      font-size: 30px;
-      padding: 0;
+      font-size: 20px;
+      padding: 5px;
       margin: 0;
     }
     .open_status {
-      background-color: green;
-      padding: 10px;
+      // background-color: green;
+      // padding: 10px;
       width: fit-content; 
       border-radius: 10px;
       margin: 10px 0 10px 0;
     }
     .close_status {
-      background-color: rgb(225, 19, 16);
-      padding: 10px;
+      // background-color: rgb(225, 19, 16);
+      // padding: 10px;
       width: fit-content; 
       border-radius: 10px;
       margin: 10px 0 10px 0;
@@ -40,40 +51,72 @@
   }
   .main_top_right {
     flex-grow: 1;
-    background-color: bisque;
   }
+}
+
+.div_open_status_wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.pulsing_circle_wrapper {
+  position: relative;
+  width: 50px;
 }
 
 .business_hours {
   width: 100%;
   display: flex;
+  justify-content: start;
   flex-direction: row;
-  font-size: 30px;
-  .business_hours_days {
+  .business_hours_section {
     display: flex;
     flex-direction: column;
-    padding-right: 20px;
-    div {
-      padding: 5px 0;
+    max-width: 200px;
+    max-height: 400px;
+    background-color: rgb(7, 7, 7);
+    color: white;
+    margin: 5px;
+    border-radius: 10px;
+    // box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 10px 20px;
+    .business_hours_day {
+      // min-height: 50px;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px;
+      // font-family: Tahoma, Helvetica, "Microsoft YaHei New", "Microsoft Yahei";
     }
-  }
-  .business_hours_times {
-    display: flex;
-    flex-direction: column;
-    div {
-      padding: 5px 0;
+    .business_hours_line_separator {
+      border: 1px solid white;
+      margin: 5px; 
+      // padding: 5px;
+      margin: 0;
+    }
+    .business_hours_hours {
+      text-align: center;
+      padding: 20px 0;
     }
   }
 }
 
-.main_services {
+.main_services_wrapper {
+  position: relative;
   width: 100%;
+  box-sizing: border-box;
+}
+
+.main_services {
+  box-sizing: border-box;
+  margin: 20px 2rem;
+  padding: 10px;
+  // width: 100%;
   min-height: 50vh;
-  background-color: rgb(0, 94, 255);
   border-radius: 20px;
   display: flex;
   flex-direction: row;
   color: white;
+  background-color: rgb(37, 92, 232);
   .main_services_left {
     width: 50%;
     max-width: 500px;
@@ -83,7 +126,7 @@
     // background-color: orange;
     padding: 80px;
     h1 {
-      margin: 0;
+      padding: 0 20px;
       font-size: 80px;
     }
   }
@@ -122,21 +165,20 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .main_top {
     display: flex;
     flex-direction: column;
-    background-color: aquamarine;
     width: 100%;
+    height: 100%;
     padding-top: 80px;
     .main_top_left {
       display: flex;
       flex-direction: column;
-      align-items: start;
+      align-items: center;
       width: 100%;
       height: 100%;
       // max-width: 900px;
-      background-color: brown;
       padding: 0px;
       h1 {
         font-size: 48px;
@@ -151,7 +193,6 @@
     }
     .main_top_right {
       // flex-grow: 1;
-      background-color: bisque;
     }
   }
 
@@ -179,19 +220,21 @@
   }
   
   .main_services {
+    margin: 2rem 0;
+    border-radius: 0;
+    padding: 2rem 0; 
     width: 100%;
-    background-color: chartreuse;
     display: flex;
     flex-direction: column;
+    background-color: rgb(37, 92, 232);
     .main_services_left {
       width: 100%;
       display: flex;
       flex-direction: column;
-      background-color: orange;
       margin: 0;
       padding: 30px 0; 
       h1 {
-        margin: 0;
+        margin: 0 20px;
         padding: 0; 
         font-size: 40px;
       }
@@ -199,7 +242,6 @@
     .main_services_right {
       display: flex;
       flex-direction: column;
-      background-color: red;
       padding: 0px;
       .main_services_right_items {
         display: flex;

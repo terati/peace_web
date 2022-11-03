@@ -6,11 +6,7 @@ import rehypeSlug from 'rehype-slug';
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  i18n: {
-    locales: ['zh', 'en' ],
-    defaultLocale: 'zh',
-    localeDetection: false
-  }
+  
 }
 
 // const withMDX = require('@next/mdx')({
@@ -23,13 +19,7 @@ const nextConfig = {
 // })
 
 const withMDX = nextMDX({
-  reactStrictMode: true,
-  swcMinify: true,
-  i18n: {
-    locales: ['zh', 'en' ],
-    defaultLocale: 'zh',
-    localeDetection: false
-  },
+  
   extension: /\.mdx?$/,
   options: {
     providerImportSource: '@mdx-js/react',
@@ -47,12 +37,30 @@ const withMDX = nextMDX({
 //   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
 // })
 
-export default withMDX({
+export default withMDX(
+  
+  {
+  reactStrictMode: true,
+  swcMinify: true,
   eslint: {
     // Warning: This allows production builds to successfully complete even if
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  // i18n: {
+  //   locales: ['en', 'zh'],
+  //   defaultLocale: 'zh',
+  //   localeDetection: false,
+  // },
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/',
+  //       destination: '/blog/zh/high_blood_pressure',
+  //       permanent: false,
+  //     },
+  //   ]
+  // },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   webpack: (config, { isServer }) => {
     // Fixes npm packages (mdx) that depend on `fs` module
@@ -61,5 +69,4 @@ export default withMDX({
     }
     return config
   },
-  
 })

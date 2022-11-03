@@ -41,14 +41,13 @@ function Process() {
             </div>
           </div>
           <div className={styles.process_inner_wrapper_row_wrapper}> 
-            <Image 
-              src={"/insurance.jpg"}
-              layout="responsive"
-              objectFit='contain'
-              width="100%"
-              height="100%"
-              alt=""
-            />
+            <div className={styles.process_img_wrapper}> 
+              <Image
+                src={"/insurance.jpg"}
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
           </div>
         </div>
 
@@ -79,12 +78,14 @@ function Process() {
             </div>
           </div>
           <div className={styles.process_inner_wrapper_row_wrapper}> 
-            <Image 
-              src={"/family.jpg"} 
-              width={"100%"}
-              height={"100%"}
-              alt=""  
-            />
+            <div className={styles.process_img_wrapper}> 
+              <Image
+                src={"/family.jpg"} 
+                layout="fill"
+                objectFit="cover"
+              />
+            </div>
+            
           </div>
         </div>
 

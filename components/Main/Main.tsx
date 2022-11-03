@@ -20,6 +20,7 @@ import { Footer } from './sections/footer';
 import Location from './sections/location/Location';
 import Logo from './icons/Logo';
 import { RootState } from '../../store/store';
+import { Pulsing_Cicle } from '../pulsing_circle';
 
 // type state_type = {
 //   lang?: string;
@@ -27,6 +28,7 @@ import { RootState } from '../../store/store';
 
 function Main() {
   const lang = useSelector((state:RootState) => state.lang ?? "");
+  console.log(lang);
   const dispatch = useDispatch();
   const router = useRouter();
 
@@ -44,6 +46,7 @@ function Main() {
   const [min, set_min] = React.useState(now.getMinutes());
 
   const [opened, set_opened] = React.useState(true);
+  const title_with_lang:string = (lang == 'zh') ? '安康藥房' : 'Peace Pharmacy'
 
   React.useEffect(() => {
     if ((day>0 && day<6 && hour>=9 && (hour<=17 && min<=30) ) ||
@@ -63,62 +66,103 @@ function Main() {
     <>
       <IntlProvider locale={lang} defaultLocale={lang} messages={(lang == 'zh') ? cn : en}>
         <Head>
-          <title>Peace Pharmacy</title>
-          <meta name="Peace Pharmacy" content="Peace Pharmacy" />
+          <title>
+            { title_with_lang }
+            {/* <FormattedMessage id = "main.main_top_left_p1" /> */}
+          </title>
+          <meta name={ title_with_lang } content={ title_with_lang } />
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navigation />
         <div className={styles.main_top}>
           <div className={styles.main_top_left}>
-            <div>
-              <Logo fill={"black"} width={"100%"} height={200}/>
-            </div>
-            {/* <h1>
-              <FormattedMessage id = "main.main_top_left_h1" />
-            </h1> */}
-            <p>
-              <FormattedMessage id = "main.main_top_left_p1" />
-            </p>
-            <p>
-              <FormattedMessage id = "main.main_top_left_phone" />
-            </p>
-            <div>
-              { opened &&
-                <div className={styles.open_status}>
-                  Currently Opened Until {(day==6) ? "1PM" : "5:30PM"}
-                </div>
-              }
-              { !opened &&
-                <div className={styles.close_status}>
-                  Currently Closed
-                </div>
-              }
-              
-            </div>
-            <div className={styles.business_hours}>
-               <div className={styles.business_hours_days}>
-                <div> 
-                  <FormattedMessage id = "main.mon_to_fri" />
-                </div>
-                <div> 
-                  <FormattedMessage id = "main.sat" />
-                </div>
-                <div> 
-                  <FormattedMessage id = "main.sun" />
-                </div>
-               </div>
-               <div className={styles.business_hours_times}>
-                <div> 
-                  <FormattedMessage id = "main.mon_to_fri_times" />
-                </div>
-                <div> 
-                  <FormattedMessage id = "main.sat_times" />
-                </div>
-                <div> 
-                  <FormattedMessage id = "main.sun_times" />
-                </div>
-               </div>
+            <div className={styles.main_top_left_inner_wrapper}>
+              <div>
+                <Logo fill={"black"} width={"100%"} height={190}/>
+              </div>
+              {/* <h1>
+                <FormattedMessage id = "main.main_top_left_h1" />
+              </h1> */}
+              <p>
+                <FormattedMessage id = "main.main_top_left_p1" />
+              </p>
+              <p>
+                <FormattedMessage id = "main.main_top_left_phone" />
+              </p>
 
+              <div className={styles.div_open_status_wrapper}>
+                <div className={styles.pulsing_circle_wrapper}>
+                  <Pulsing_Cicle open_status={opened}/>
+                </div>
+                
+                <div>
+                  { opened &&
+                    <div className={styles.open_status}>
+                    <p> <FormattedMessage id = "main.open_status" /> {(day==6) ? "1PM" : "5:30PM"} </p>
+                    </div>
+                  }
+                  { !opened &&
+                    <div className={styles.close_status}>
+                    <p> <FormattedMessage id = "main.closed_status" /> </p>
+                    </div>
+                  }
+                </div>
+                
+                
+              </div>
+              <div className={styles.business_hours}>
+
+                <div className={styles.business_hours_section}>
+                  <div className={styles.business_hours_day}>
+                    <FormattedMessage id = "main.mon_to_fri" />
+                  </div> 
+                  <div className={styles.business_hours_line_separator}></div>
+                  <div className={styles.business_hours_hours}>
+                    <FormattedMessage id = "main.mon_to_fri_times" />
+                  </div>
+                </div>
+                <div className={styles.business_hours_section}>
+                  <div className={styles.business_hours_day}>
+                      <FormattedMessage id = "main.sat" />
+                    </div> 
+                    <div className={styles.business_hours_line_separator}></div>
+                    <div className={styles.business_hours_hours}>
+                      <FormattedMessage id = "main.sat_times" />
+                    </div>
+                  </div>
+                <div className={styles.business_hours_section}>
+                  <div className={styles.business_hours_day}>
+                      <FormattedMessage id = "main.sun" />
+                    </div> 
+                    <div className={styles.business_hours_line_separator}></div>
+                    <div className={styles.business_hours_hours}>
+                      <FormattedMessage id = "main.sun_times" />
+                    </div>
+                  </div>
+                {/* <div className={styles.business_hours_days}>
+                  <div> 
+                    <FormattedMessage id = "main.mon_to_fri" />
+                  </div>
+                  <div> 
+                    <FormattedMessage id = "main.sat" />
+                  </div>
+                  <div> 
+                    <FormattedMessage id = "main.sun" />
+                  </div>
+                </div>
+                <div className={styles.business_hours_times}>
+                  <div> 
+                    <FormattedMessage id = "main.mon_to_fri_times" />
+                  </div>
+                  <div> 
+                    <FormattedMessage id = "main.sat_times" />
+                  </div>
+                  <div> 
+                    <FormattedMessage id = "main.sun_times" />
+                  </div>
+                </div> */}
+
+              </div>
             </div>
           </div>
           <div className={styles.main_top_right}>
@@ -126,54 +170,57 @@ function Main() {
           </div>
         </div>
 
-        <div className={styles.main_services}>
-          <div className={styles.main_services_left}>
-            <h1> <FormattedMessage id = "main.services.h1" /> </h1>
-          </div>
-          <div className={styles.main_services_right}>
-            <div className={styles.main_services_right_items}>
-              <div className={styles.main_services_right_items_left_icon}> 
-                <Care_Icon height={icon_width} width={icon_width} fill={"white"}/>
-              </div>
-              <div className={styles.main_services_right_items_right_content}>
-                <h2>
-                  <FormattedMessage id = "main.services.item1.h2" />
-                </h2>
-                <p>
-                  <FormattedMessage id = "main.services.item1.p" />
-                </p>
-              </div>
+        <div className={styles.main_services_wrapper}>
+          <div className={styles.main_services}>
+            <div className={styles.main_services_left}>
+              <h1> <FormattedMessage id = "main.services.h1" /> </h1>
             </div>
+            <div className={styles.main_services_right}>
+              <div className={styles.main_services_right_items}>
+                <div className={styles.main_services_right_items_left_icon}> 
+                  <Care_Icon height={icon_width} width={icon_width} fill={"white"}/>
+                </div>
+                <div className={styles.main_services_right_items_right_content}>
+                  <h2>
+                    <FormattedMessage id = "main.services.item1.h2" />
+                  </h2>
+                  <p>
+                    <FormattedMessage id = "main.services.item1.p" />
+                  </p>
+                </div>
+              </div>
 
-            <div className={styles.main_services_right_items}>
-              <div className={styles.main_services_right_items_left_icon}> 
-                <Medicine_Icon height={icon_width} width={icon_width} fill={"white"}/>
+              <div className={styles.main_services_right_items}>
+                <div className={styles.main_services_right_items_left_icon}> 
+                  <Medicine_Icon height={icon_width} width={icon_width} fill={"white"}/>
+                </div>
+                <div className={styles.main_services_right_items_right_content}>
+                  <h2>
+                    <FormattedMessage id = "main.services.item2.h2" />
+                  </h2>
+                  <p>
+                    <FormattedMessage id = "main.services.item2.p" />
+                  </p>
+                </div>
               </div>
-              <div className={styles.main_services_right_items_right_content}>
-                <h2>
-                  <FormattedMessage id = "main.services.item2.h2" />
-                </h2>
-                <p>
-                  <FormattedMessage id = "main.services.item2.p" />
-                </p>
-              </div>
-            </div>
 
-            <div className={styles.main_services_right_items}>
-              <div className={styles.main_services_right_items_left_icon}> 
-                <Umbrella_Icon height={icon_width} width={icon_width} fill={"white"}/>
-              </div>
-              <div className={styles.main_services_right_items_right_content}>
-                <h2>
-                  <FormattedMessage id = "main.services.item3.h2" />
-                </h2>
-                <p>
-                  <FormattedMessage id = "main.services.item3.p" />
-                </p>
+              <div className={styles.main_services_right_items}>
+                <div className={styles.main_services_right_items_left_icon}> 
+                  <Umbrella_Icon height={icon_width} width={icon_width} fill={"white"}/>
+                </div>
+                <div className={styles.main_services_right_items_right_content}>
+                  <h2>
+                    <FormattedMessage id = "main.services.item3.h2" />
+                  </h2>
+                  <p>
+                    <FormattedMessage id = "main.services.item3.p" />
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        
 
         <Process />
         <Location />

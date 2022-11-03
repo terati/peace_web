@@ -1,5 +1,5 @@
 .slider_wrapper {
-  padding: 20px 0;
+  padding: 20px 0px;
   // border-top: 1px solid white;
   border-bottom: 2px solid grey;
   cursor: pointer;
@@ -30,7 +30,7 @@
   }
 }
 .opened {
-  max-height: 100px;
+  max-height: 200px;
 }
 .closed {
   max-height: 0px;
@@ -57,4 +57,7 @@
 
 
 @media (max-width: 600px) {
+  .slider_wrapper {
+    padding: 20px 20px;
+  }
 }

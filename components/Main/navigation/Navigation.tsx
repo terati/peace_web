@@ -8,7 +8,7 @@ import { RootState } from '../../../store/store';
 
 function Navigation() {
   const lang = useSelector((state: RootState) => state.lang);
-  const [sidebar_open, set_sidebar_open] = React.useState(false);
+  const [sidebar_open, set_sidebar_open] = React.useState(true);
 
   return (
     <div className={styles.navbar_wrapper}>

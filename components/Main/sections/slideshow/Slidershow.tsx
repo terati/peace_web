@@ -1,6 +1,7 @@
 import * as React from 'react';
 import styles from './Slideshow.module.scss';
 import elder from '../../../../public/slideshow_ims/elder.png';
+import Image from 'next/image';
 
 function Slideshow() {
   const ims = [`/slideshow_ims/elder.png`, `/slideshow_ims/chinatown_gate.jpg`, `/slideshow_ims/chicago_xl.png`, `/slideshow_ims/chinatown.jpg` ];
@@ -40,21 +41,35 @@ function Slideshow() {
   }
 
   return (
-    <div className={styles.slideshow_wrapper}>
-      <div className={`${styles.slideshow_inner_div} ${classNames ? styles[classNames] : ''}`}
-        onAnimationStart={onAnimationStart}
-        onAnimationEnd={onAnimationEnd}
-      >
-
-        <div className={styles.slideshow_inner_images}>
-          <img src={ims[im1]} alt="Logo" height={600}/>
+    <>
+      <div className={styles.slideshow_wrapper}>
+        <div className={`${styles.slideshow_inner_div} ${classNames ? styles[classNames] : ''}`}
+          onAnimationStart={onAnimationStart}
+          onAnimationEnd={onAnimationEnd}
+        >
+          <div className={styles.slideshow_inner_images}>
+            <img src={ims[im1]} alt="Logo" height={600}/>
+          </div>
+          <div className={styles.slideshow_inner_images}>
+            <img src={ims[im2]} alt="Logo" height={600}/>
+          </div>
+          
         </div>
-        <div className={styles.slideshow_inner_images}>
-          <img src={ims[im2]} alt="Logo" height={600}/>
-        </div>
-        
       </div>
-    </div>
+      <div className={styles.mobile_static_image}>
+        <div className={styles.module_static_image_inner_wrapper}>
+          <p> Ello World </p>
+          <Image 
+            src={ims[0]} 
+            alt="pharmacy"
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
+       
+      </div>
+    </>
+    
   )
 }
 

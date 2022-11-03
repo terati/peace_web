@@ -1,53 +1,84 @@
-.slideshow_wrapper {
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  // padding: 50px 10px; 
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-@keyframes slide_forward {
-  0%   {top: -100vh;}
-  100% {top: 0vh;}
-}
-
-@keyframes slide_reverse {
-  0%   {top: 0vh;}
-  100% {top: -100vh;}
-}
-
-.slideshow_inner_div {
-  position: relative;
-  // transition: 0.5s linear;
-  // transform: translateY(0vh);
-  
-  // animation-iteration-count: infinite;
-}
-
-.animation_forward {
-  animation-name: slide_forward;
-  animation-duration: 0.3s;
-  animation-timing-function: ease;
-  top: 0vh;
-}
-
-.animation_reverse {
-  animation-name: slide_reverse;
-  animation-duration: 0.3s;
-  animation-timing-function: ease;
-  top: -100vh;
-}
-
-.slideshow_inner_images {
-  padding: 100px 0 0 20px;
-  img {
-    border-radius: 20px;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
+@media (min-width: 800px) {
+  .slideshow_wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    // padding: 50px 10px; 
+    box-sizing: border-box;
+    overflow: hidden;
   }
-  height: 100vh;
+
+  @keyframes slide_forward {
+    0%   {top: -100vh;}
+    100% {top: 0vh;}
+  }
+
+  @keyframes slide_reverse {
+    0%   {top: 0vh;}
+    100% {top: -100vh;}
+  }
+
+  .slideshow_inner_div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // transition: 0.5s linear;
+    // transform: translateY(0vh);
+    
+    // animation-iteration-count: infinite;
+  }
+
+  .animation_forward {
+    animation-name: slide_forward;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    top: 0vh;
+  }
+
+  .animation_reverse {
+    animation-name: slide_reverse;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    top: -100vh;
+  }
+
+  .slideshow_inner_images {
+    padding: 100px 0 0 20px;
+    img {
+      height: 100%;
+      border-radius: 20px;
+      -webkit-user-drag: none;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+    }
+    height: 100vh;
+  }
+  .mobile_static_image {
+    display: none;
+  }
+
+}
+
+
+
+@media (max-width: 800px) {
+  .slideshow_wrapper {
+    display: none;
+  }
+  .mobile_static_image {
+    position: relative;
+    .module_static_image_inner_wrapper {
+      position: relative;
+      min-height: 300px;
+      width: 100%;
+      img {
+        border-radius: 20px;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    
+  }
 }

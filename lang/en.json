@@ -13,6 +13,8 @@
   "main.mon_to_fri_times" : "9AM - 5:30PM",
   "main.sat_times" : "9AM - 1PM",
   "main.sun_times" : "Closed",
+  "main.open_status" : "Opened until ",
+  "main.closed_status" : "Currently Closed",
 
   "main.services.h1" : "Services",
   "main.services.item1.h2" : "We accept most insurance. ",

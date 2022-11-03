@@ -13,6 +13,8 @@
   "main.mon_to_fri_times" : "9AM - 5:30PM",
   "main.sat_times" : "9AM - 1PM",
   "main.sun_times" : "关闭",
+  "main.open_status" : "营业至 ",
+  "main.closed_status" : "目前关闭",
 
   "main.services.h1" : "服务",
   "main.services.item1.h2" : "我们接受大多数保险。",
