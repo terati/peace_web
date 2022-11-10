@@ -13,21 +13,21 @@ function Navigation() {
   return (
     <div className={styles.navbar_wrapper}>
       <ul className={styles.navbar_ul}>
-        <li className={styles.title}><div><Link href={`${lang}/services`}> 
+        <li className={styles.title}><Link href={`#`}><div> 
           <FormattedMessage id = "navbar.title" />
-          </Link></div>
+          </div></Link>
         </li>
-        <li className={styles.item}><Link href={`${lang}/services`}> 
+        <li className={styles.item}><Link href={`#section_main_services`}><div>
           <FormattedMessage id = "navbar.services" />
-          </Link>
+          </div></Link>
         </li>
-        <li className={styles.item}><Link href={`${lang}/process`}> 
+        <li className={styles.item}><Link href={`#section_main_process`}><div>
           <FormattedMessage id = "navbar.process" />
-          </Link>
+          </div></Link>
         </li>
-        <li className={styles.item}><Link href={`${lang}/faq`}> 
+        <li className={styles.item}><Link href={`#section_main_faq`}><div> 
           <FormattedMessage id = "navbar.faq" />
-          </Link>
+          </div></Link>
         </li>
         <li className={styles.hamburger_icon}
           onClick={() => set_sidebar_open(!sidebar_open)}

@@ -19,6 +19,7 @@ interface Meta_Interface {
   src: string;
   alt: string;
   contents: Array<Content_Type>
+  lang: string;
 }
 
 interface BlogPost_Props_Interface {
@@ -31,19 +32,48 @@ function BlogPost(props:BlogPost_Props_Interface) {
     children,
     meta
   } = props;
-  console.log(children);
+  const [cnt, setCnt] = React.useState(0);
+  const [current_section, set_current_section] = React.useState("");
+  
+  React.useEffect(() => {
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          console.log(entry.target.id);
+          set_current_section(entry.target.id);
+          // console.log(entry);
+          // setCnt(prev => prev+1);
+          // try {
+            // observer.unobserve(entry.target);
+          // } catch {
+            // console.log();
+          // }
+        }
+      })
+    }, {threshold: 1});
+    document.querySelectorAll("h1").forEach(h1 => { observer.observe(h1) });
+    return () => document.querySelectorAll("h1").forEach(h1 => { observer.unobserve(h1) });
+  }, []);
+  
+  React.useEffect(() => {
+    // if (meta.lang=="en") set_title("Peace Pharmacy");
+    // if (meta.lang=="zh") set_title("安康藥房");
+    const prevTitle = document.title;
+    if (meta.lang=="en") document.title = "Peace Pharmacy";
+    if (meta.lang=="zh") document.title = "安康藥房";
+  }, [meta.lang]);
+
   return (
     <>
-      <title> Peace Pharmacy </title>
       <Blogpost_navbar />
       <div className={styles.div_wrapper}>
 
         <div className={styles.container}>
           <div className={styles.inner_container}>
             <h1 className={styles.post_title}> { meta.title } </h1>
-            <p> { meta.description } </p>
-            <p> { meta.author } </p>
-            <p> { ` ${meta.readTime}` } </p>
+            <p className={styles.post_description}> { meta.description } </p>
+            <p> {(meta.lang=="en") ? "Author: " : "作者："} { meta.author } </p>
+            <p> {(meta.lang=="en") ? "Read Time: " : "阅读时间："} {`${meta.readTime}`} {(meta.lang=="en") ? "min" : "分钟。"} </p>
             <div className={styles.main_image_wrapper}>
               <Image 
                 src={meta.src}
@@ -66,11 +96,12 @@ function BlogPost(props:BlogPost_Props_Interface) {
           <div className={styles.content_sidebar}>
             
             <div className={styles.div_inner_content_sidebar}> 
-              <h2> Contents </h2>
+              <h2> {meta.lang=="en" ? "Contents" : "内容"} </h2>
               { meta.contents?.map((item) => {
                   return (
                     <>
-                      <div className={styles.div_inner_content_sidebar_navigation_items}>
+                      <div className={`${styles.div_inner_content_sidebar_navigation_items} 
+                                      ${(item.src==current_section) ? styles.div_inner_content_sidebar_navigation_items_current_section : ""}`}>
                         <Link href={`#${item.src}`}>
                           {item.title}
                         </Link>

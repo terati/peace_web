@@ -8,7 +8,7 @@ function Location() {
   const inViewport = useInterSection(ref, '0px');
 
   React.useEffect(() => {
-    console.log(inViewport); 
+    // console.log(inViewport); 
   }, [inViewport])
 
   return (

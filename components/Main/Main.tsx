@@ -170,7 +170,7 @@ function Main() {
           </div>
         </div>
 
-        <div className={styles.main_services_wrapper}>
+        <div id={"section_main_services"} className={styles.main_services_wrapper}>
           <div className={styles.main_services}>
             <div className={styles.main_services_left}>
               <h1> <FormattedMessage id = "main.services.h1" /> </h1>
@@ -222,9 +222,9 @@ function Main() {
         </div>
         
 
-        <Process />
+        <Process id={"section_main_process"}/>
         <Location />
-        <Faq />
+        <Faq id={"section_main_faq"}/>
 
         <button >
           <Link href={lang=="zh" ? "/en":"/zh"} locale={lang=="zh" ? "en":"zh"} >

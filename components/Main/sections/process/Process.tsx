@@ -4,12 +4,19 @@ import { FormattedMessage } from 'react-intl';
 import Checkmark_icon from './Checkmark_icon';
 import Image from 'next/image';
 
-function Process() {
+interface process_props {
+  id: string;
+}
+
+function Process(props: process_props) {
+  const {
+    id
+  } = props;
   const size = 30;
   const color = "black";
 
   return (
-    <div className={styles.process_wrapper}>
+    <div id={id} className={styles.process_wrapper}>
       <h2> <FormattedMessage id="main.process.h2" /> </h2>
       <p> <FormattedMessage id="main.process.p" /> </p>
       <div className={styles.process_inner_wrapper}> 

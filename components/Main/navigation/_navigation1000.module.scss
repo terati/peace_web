@@ -24,6 +24,9 @@
   // &:before {
     
   // }
+  li:not(:first-child) {
+    cursor: pointer;
+  }
 }
 .navbar_ul {
   list-style-type: none;

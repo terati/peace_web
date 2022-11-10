@@ -42,17 +42,17 @@ const customH2 = ({ id, ...rest }: {id?: String}) => {
         <div className={styles.customH2}>
           <Link href={`#${id}`}>
             <div className={styles.header_wrapper}>
-              <a>
-                <h1 id={`${id}`} {...rest} />  
-              </a>
+              <div className={styles.header_h1_wrapper}>
+                <a>
+                  <h1 id={`${id}`} {...rest} />  
+                </a>
+              </div>
               <div className={styles.chain}>
-                <Chain_icon fill={'white'} height={15} width={15}/>
+                <Chain_icon fill={'black'} height={15} width={15}/>
               </div>
             </div>
           </Link>
         </div>
-        
-      
     )
   }
   return <h1 {...rest} />;

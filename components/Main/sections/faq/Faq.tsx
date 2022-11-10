@@ -3,12 +3,19 @@ import styles from './Faq.module.scss';
 import { FormattedMessage } from 'react-intl';
 import { Slider } from './slider';
 
-function Faq() {
+interface faq_props {
+  id: string;
+}
+
+function Faq(props: faq_props) {
+  const {
+    id,
+  } = props;
   const add_border = {
     'border-top': '2px solid grey'
   }
   return (
-    <div className={styles.faq_wrapper}>
+    <div id={"section_main_faq"} className={styles.faq_wrapper}>
       <h1>
         <FormattedMessage id = "main.faq.h1" />
       </h1>
