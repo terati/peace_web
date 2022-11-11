@@ -17,15 +17,15 @@ function Navigation() {
           <FormattedMessage id = "navbar.title" />
           </div></Link>
         </li>
-        <li className={styles.item}><Link href={`#section_main_services`}><div>
+        <li className={styles.item}><Link href={`/#section_main_services`}><div>
           <FormattedMessage id = "navbar.services" />
           </div></Link>
         </li>
-        <li className={styles.item}><Link href={`#section_main_process`}><div>
+        <li className={styles.item}><Link href={`/#section_main_process`}><div>
           <FormattedMessage id = "navbar.process" />
           </div></Link>
         </li>
-        <li className={styles.item}><Link href={`#section_main_faq`}><div> 
+        <li className={styles.item}><Link href={`/#section_main_faq`}><div> 
           <FormattedMessage id = "navbar.faq" />
           </div></Link>
         </li>

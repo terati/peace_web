@@ -1,0 +1,24 @@
+.wrapper404 {
+  padding: 120px; 
+  font-size: 40px;
+  max-width: 100%;
+  h1 {
+    padding: 30px;
+    font-size: medium;
+  }
+  .number_wrapper {
+    font-size: 150px;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .wrapper404 {
+    padding: 10px;
+    font-size: 30px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
