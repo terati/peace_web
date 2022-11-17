@@ -8,6 +8,7 @@ import { IntlProvider } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import { lang_toggle } from '../../reducers/lang_reducer';
+import { store_set_lang_state } from '../../reducers/lang_reducer';
 import { useRouter } from 'next/router';
 import Care_Icon from './icons/Care_Icon';
 import Medicine_Icon from './icons/Medicine_Icon';
@@ -16,6 +17,7 @@ import Faq from './sections/faq/Faq';
 import { Process } from './sections/process';
 import { Navigation } from './navigation';
 import { Slideshow } from './sections/slideshow';
+import { Showroom } from './sections/showroom';
 import { Footer } from './sections/footer';
 import Location from './sections/location/Location';
 import Logo from './icons/Logo';
@@ -28,13 +30,13 @@ import { Pulsing_Cicle } from '../pulsing_circle';
 
 function Main() {
   const lang = useSelector((state:RootState) => state.lang ?? "");
-  console.log(lang);
   const dispatch = useDispatch();
   const router = useRouter();
 
   const toggle_lang_click = () => {
-    dispatch(lang_toggle());
-    console.log(lang);
+    // dispatch(lang_toggle());
+    dispatch(store_set_lang_state('en'))
+    // console.log(lang);
     // router.push(`${lang}`);
   }
 
@@ -181,7 +183,7 @@ function Main() {
                   <Care_Icon height={icon_width} width={icon_width} fill={"white"}/>
                 </div>
                 <div className={styles.main_services_right_items_right_content}>
-                  <h2>
+                  <h2> 
                     <FormattedMessage id = "main.services.item1.h2" />
                   </h2>
                   <p>
@@ -224,13 +226,14 @@ function Main() {
 
         <Process id={"section_main_process"}/>
         <Location />
+        <Showroom />
         <Faq id={"section_main_faq"}/>
 
-        <button >
+        {/* <button >
           <Link href={lang=="zh" ? "/en":"/zh"} locale={lang=="zh" ? "en":"zh"} >
             <a onClick={toggle_lang_click}> Toggle </a>
           </Link>
-        </button>
+        </button> */}
         <Footer />
       </IntlProvider>
     </>

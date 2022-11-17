@@ -45,5 +45,16 @@
 
   "main.location.h2" : "Our Location",
 
+  "main.articles.h2" : "Blog",
+  "main.article1.h2" : "Generic Drugs: Questions & Answers",
+  "main.article1.p1" : "A generic drug is a medication created to be the same as an already marketed brand-name drug in dosage form, safety, strength, route of...",
+
+  "main.article2.h2" : "High Blood Pressure–Understanding the Silent Killer",
+  "main.article2.p1" : "Approximately 1 in 3, more than 100 million, American adults have high blood pressure. But only half of those people have...",
+
+  "main.article3.h2" : "Is Your Hand Sanitizer on FDA’s List of Products You Should Not Us?",
+  "main.article3.p1" : "One of the best ways to prevent the spread of COVID-19 is to wash your hands with soap and water. If soap and water are not available...",
+
+
   "footer.copyright" : "2022 Peace Pharmacy. All Rights Reserved."
 }
