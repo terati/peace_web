@@ -22,8 +22,10 @@ function Location() {
             <img src={"/peace_pharmacy_icon.PNG"} height={70}/>
           </div>
           <div className={styles.location_float_bar_right}>
-            <h2> 2320 S Wentworth Ave </h2>
-            <h2> Chicago, IL 60616 </h2>
+            <div className={styles.location_address_wrapper}>
+              <h2> 2320 S Wentworth Ave </h2>
+              <h2> Chicago, IL 60616 </h2>
+            </div>
           </div>
         </div>
         <img src={"/map_dark_annotated.PNG"} />

@@ -51,18 +51,21 @@ function Main() {
   const title_with_lang:string = (lang == 'zh') ? '安康藥房' : 'Peace Pharmacy'
 
   React.useEffect(() => {
-    if ((day>0 && day<6 && hour>=9 && (hour<=17 && min<=30) ) ||
-        (day==6 && hour>=9 && hour<13) 
-      ) {
-        set_opened(true);
-      } else {
-        set_opened(false);
-      }
-
-      // set_day(6);
-      // set_hour(9);
-      // set_min(0);
-  }, [day, hour, min])
+    console.log(day, hour, min);
+    async function fetchDate() {
+      if ((day>0 && day<6 && hour>=9 && ((hour<17) || (hour==17&&min<=30)) ) ||
+          (day==6 && hour>=9 && hour<13) 
+        ) {
+          set_opened(true);
+        } else {
+          set_opened(false);
+        }
+    }
+    const intervalId = setInterval(() => {
+      fetchDate();
+    }, 1000*60)
+    return () => clearInterval(intervalId);
+  }, [])
 
   return (
     <>
