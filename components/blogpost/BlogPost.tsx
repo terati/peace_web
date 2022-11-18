@@ -3,6 +3,7 @@ import { Blogpost_footer } from '../blogpost_footer';
 import { Blogpost_navbar } from '../blogpost_navbar';
 import { IntlProvider } from 'react-intl';
 import { useSelector } from 'react-redux';
+import { RootState } from '../../store/store';
 import cn from '../../lang/cn.json';
 import en from '../../lang/en.json';
 
