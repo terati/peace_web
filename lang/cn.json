@@ -55,5 +55,9 @@
   "main.article3.h2" : "你的洗手液是否在美国食品及药物管理局禁止使用的产品清单上?",
   "main.article3.p1" : "防止 COVID-19 传播的最佳方法之一是用肥皂和水洗手。 如果没有肥皂和水，疾病控制和预防中心建议使用含酒精的洗手液……",
 
-  "footer.copyright" : "2022 和平药房。 版权所有。"
+  "footer.copyright" : "2022 和平药房。 版权所有。",
+  "footer.site_map" : "站点地图",
+  "footer.terms_and_conditions": "条款及细则",
+  "footer.privacy_policy" : "隐私政策",
+  "footer.cookie_policy" : "饼干政策"
 }

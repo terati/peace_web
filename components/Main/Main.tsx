@@ -47,11 +47,10 @@ function Main() {
   const [hour, set_hour] = React.useState(now.getHours());
   const [min, set_min] = React.useState(now.getMinutes());
 
-  const [opened, set_opened] = React.useState(true);
-  const title_with_lang:string = (lang == 'zh') ? '安康藥房' : 'Peace Pharmacy'
+  const [opened, set_opened] = React.useState(false);
+  const title_with_lang:string = (lang == 'zh') ? '安康藥房' : 'Peace Pharmacy';
 
   React.useEffect(() => {
-    console.log(day, hour, min);
     async function fetchDate() {
       if ((day>0 && day<6 && hour>=9 && ((hour<17) || (hour==17&&min<=30)) ) ||
           (day==6 && hour>=9 && hour<13) 
@@ -64,6 +63,7 @@ function Main() {
     const intervalId = setInterval(() => {
       fetchDate();
     }, 1000*60)
+    fetchDate()
     return () => clearInterval(intervalId);
   }, [])
 
@@ -88,9 +88,9 @@ function Main() {
               {/* <h1>
                 <FormattedMessage id = "main.main_top_left_h1" />
               </h1> */}
-              <p>
+              <h2>
                 <FormattedMessage id = "main.main_top_left_p1" />
-              </p>
+              </h2>
               <p>
                 <FormattedMessage id = "main.main_top_left_phone" />
               </p>

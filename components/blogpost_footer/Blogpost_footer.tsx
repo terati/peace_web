@@ -20,18 +20,20 @@ function Blogpost_footer() {
           <span className={styles.logo}>
           </span>
           <div className={styles.blog_footer_options_wrapper}> 
-            <div className={styles.blog_footer_option}>Site Map</div>
-            <div className={styles.blog_footer_option}>Terms and Conditions</div>
-            <div className={styles.blog_footer_option}>Privacy Policy</div>
-            <div className={styles.blog_footer_option}>Cookie Policy</div>
+            <div className={styles.blog_footer_option}>
+              <FormattedMessage id={"footer.site_map"} /> 
+            </div>
+            <div className={styles.blog_footer_option}>
+              <FormattedMessage id={"footer.terms_and_conditions"} /> 
+            </div>
+            <div className={styles.blog_footer_option}>
+              <FormattedMessage id={"footer.privacy_policy"} />
+            </div>
+            <div className={styles.blog_footer_option}>
+              <FormattedMessage id={"footer.cookie_policy"} />
+            </div>
           </div>
 
-          {/* <p>
-            2320 S Wentworth Ave
-          </p>
-          <p>
-            Chicago, IL 60616
-          </p> */}
         </div>
       </div>
     </>

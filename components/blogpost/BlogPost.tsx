@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { Blogpost_footer } from '../blogpost_footer';
 import { Blogpost_navbar } from '../blogpost_navbar';
+import { IntlProvider } from 'react-intl';
+import { useSelector } from 'react-redux';
+import cn from '../../lang/cn.json';
+import en from '../../lang/en.json';
+
 import Link from 'next/link';
 import styles from './BlogPost.module.scss';
 import Image from 'next/image';
@@ -34,7 +39,8 @@ function BlogPost(props:BlogPost_Props_Interface) {
   } = props;
   const [cnt, setCnt] = React.useState(0);
   const [current_section, set_current_section] = React.useState("");
-  
+  const lang = useSelector((state:RootState) => state.lang ?? "");
+
   React.useEffect(() => {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -65,58 +71,59 @@ function BlogPost(props:BlogPost_Props_Interface) {
 
   return (
     <>
-      <Blogpost_navbar />
-      <div className={styles.div_wrapper}>
+      <IntlProvider locale={lang} defaultLocale={lang} messages={(lang == 'zh') ? cn : en}>
+        <Blogpost_navbar />
+        <div className={styles.div_wrapper}>
 
-        <div className={styles.container}>
-          <div className={styles.inner_container}>
-            <h1 className={styles.post_title}> { meta.title } </h1>
-            <p className={styles.post_description}> { meta.description } </p>
-            <p> {(meta.lang=="en") ? "Author: " : "作者："} { meta.author } </p>
-            <p> {(meta.lang=="en") ? "Read Time: " : "阅读时间："} {`${meta.readTime}`} {(meta.lang=="en") ? "min" : "分钟。"} </p>
-            <div className={styles.main_image_wrapper}>
-              <Image 
-                src={meta.src}
-                alt={meta.alt}
-                width={100}
-                height={60}
-                layout={"responsive"}
-                className={styles.main_image}
-              />
-            </div>
-            
-            
-            <article className={styles.article}>
-              <div>
-                {children}
-
+          <div className={styles.container}>
+            <div className={styles.inner_container}>
+              <h1 className={styles.post_title}> { meta.title } </h1>
+              <p className={styles.post_description}> { meta.description } </p>
+              <p> {(meta.lang=="en") ? "Author: " : "作者："} { meta.author } </p>
+              <p> {(meta.lang=="en") ? "Read Time: " : "阅读时间："} {`${meta.readTime}`} {(meta.lang=="en") ? "min" : "分钟。"} </p>
+              <div className={styles.main_image_wrapper}>
+                <Image 
+                  src={meta.src}
+                  alt={meta.alt}
+                  width={100}
+                  height={60}
+                  layout={"responsive"}
+                  className={styles.main_image}
+                />
               </div>
-            </article>
-          </div>
-          <div className={styles.content_sidebar}>
-            
-            <div className={styles.div_inner_content_sidebar}> 
-              <h2> {meta.lang=="en" ? "Contents" : "内容"} </h2>
-              { meta.contents?.map((item) => {
-                  return (
-                    <>
-                      <div className={`${styles.div_inner_content_sidebar_navigation_items} 
-                                      ${(item.src==current_section) ? styles.div_inner_content_sidebar_navigation_items_current_section : ""}`}>
-                        <Link href={`#${item.src}`}>
-                          {item.title}
-                        </Link>
-                      </div>
-                    </>
-                  )
-              }) }
+              
+              
+              <article className={styles.article}>
+                <div>
+                  {children}
+
+                </div>
+              </article>
+            </div>
+            <div className={styles.content_sidebar}>
+              
+              <div className={styles.div_inner_content_sidebar}> 
+                <h2> {meta.lang=="en" ? "Contents" : "内容"} </h2>
+                { meta.contents?.map((item) => {
+                    return (
+                      <>
+                        <div className={`${styles.div_inner_content_sidebar_navigation_items} 
+                                        ${(item.src==current_section) ? styles.div_inner_content_sidebar_navigation_items_current_section : ""}`}>
+                          <Link href={`#${item.src}`}>
+                            {item.title}
+                          </Link>
+                        </div>
+                      </>
+                    )
+                }) }
+              </div>
+              
             </div>
             
           </div>
-          
         </div>
-      </div>
-      <Blogpost_footer />
-      
+        <Blogpost_footer />
+      </IntlProvider>
     </>
   )
 }

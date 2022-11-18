@@ -34,11 +34,20 @@ function Footer() {
           
         </div>
         <div className={styles.footer_div_right}>
-          <div className={styles.footer_div_right_items}> Site Map </div>
-          <div className={styles.footer_div_right_items}> Terms and Conditions </div>
-          <div className={styles.footer_div_right_items}> Privacy Policy </div>
-          <div className={styles.footer_div_right_items}> Cookie Policy </div>
+          <div className={styles.footer_div_right_items}> 
+            <FormattedMessage id={"footer.site_map"} /> 
+          </div>
+          <div className={styles.footer_div_right_items}> 
+            <FormattedMessage id={"footer.terms_and_conditions"} /> 
+          </div>
+          <div className={styles.footer_div_right_items}>
+            <FormattedMessage id={"footer.privacy_policy"} />
+          </div>
+          <div className={styles.footer_div_right_items}>
+            <FormattedMessage id={"footer.cookie_policy"} />
+          </div>
         </div>
+        
       </div>
         
     </footer> 

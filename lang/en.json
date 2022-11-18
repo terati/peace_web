@@ -56,5 +56,9 @@
   "main.article3.p1" : "One of the best ways to prevent the spread of COVID-19 is to wash your hands with soap and water. If soap and water are not available...",
 
 
-  "footer.copyright" : "2022 Peace Pharmacy. All Rights Reserved."
+  "footer.copyright" : "2022 Peace Pharmacy. All Rights Reserved.",
+  "footer.site_map" : "Site Map",
+  "footer.terms_and_conditions": "Terms and Conditions",
+  "footer.privacy_policy" : "Privacy Policy",
+  "footer.cookie_policy" : "Cookie Policy"
 }
