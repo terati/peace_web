@@ -85,7 +85,7 @@
   animation-timing-function: ease;
 }
 
-@media (max-width: 600px) { 
+@media screen and (max-width: 600px) { 
   .location_wrapper {
     padding: 100px 0 !important;
   }

@@ -26,16 +26,27 @@
   .footer_div_right_items {
     padding: 10px 20px;
     position: relative;
+    height: fit-content;
+    cursor: pointer;
+    P {
+      margin: 0;
+      padding: 0;
+    }
+    p:hover {
+      font-weight: bold;
+      text-decoration: underline;
+    }
   }
   .footer_div_right_items:not(:last-child)::after {
     content: '|';
     position: absolute;
     right: 0;
+    top: 10px;
   }
 }
 
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .footer {
     padding: 20px 0;
   }

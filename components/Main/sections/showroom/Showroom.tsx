@@ -13,6 +13,7 @@ function Showroom() {
       <h2 className={styles.showroom_h2}>
         <FormattedMessage id={"main.articles.h2"} />
       </h2>
+      <div className={styles.major_showroom_wrapper}>
       <div className={styles.showroom_wrapper}>
         <Link href={(lang == 'zh') ? "/blog/zh/high_blood_pressure" : "/blog/en/high_blood_pressure"}>
           <div className={`${styles.showroom_inner_left} ${styles.showroom_inner_left_hidden}`}>
@@ -93,6 +94,7 @@ function Showroom() {
             </div>
           </Link>
         </div>
+      </div>
       </div>
     </>
   )

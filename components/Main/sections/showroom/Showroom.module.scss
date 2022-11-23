@@ -1,7 +1,13 @@
 .showroom_h2 {
   font-size: 80px;
-  padding: 30px 100px 10px 100px;
+  padding: 30px 100px 30px 100px;
   margin: 0;
+}
+.major_showroom_wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
 }
 .showroom_wrapper {
   display: grid;
@@ -114,7 +120,7 @@
   }
 }
 
-@media (max-width: 1100px) {
+@media screen and (max-width: 1100px) {
   .showroom_h2 {
     padding: 10px;
   }
