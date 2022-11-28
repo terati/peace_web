@@ -1,17 +1,31 @@
 import * as React from 'react';
 import styles from './Navigation.module.scss';
 import { FormattedMessage } from 'react-intl';
-import { useDispatch, useSelector } from 'react-redux';
+import { 
+  useDispatch, 
+  useSelector } from 'react-redux';
 import Link from 'next/link';
 import Hamburger_icon from './Hamburger_icon';
 import { RootState } from '../../../store/store';
 import { Language_dropdown } from './language_dropdown';
+import { 
+  lang_toggle, 
+  store_set_lang_state 
+} from '../../../reducers/lang_reducer';
+import Close_icon from './Close_icon';
 
 function Navigation() {
-  const lang = useSelector((state: RootState) => state.lang);
+  const lang = useSelector((state: RootState) => state.lang ?? "");
+  const dispatch = useDispatch();
   const [sidebar_open, set_sidebar_open] = React.useState(true);
 
   const close_sidebar = () => {
+    set_sidebar_open(!sidebar_open);
+  }
+
+  const toggle_language_selection = () => {
+    dispatch(lang_toggle());
+    // dispatch(store_set_lang_state("en"));
     set_sidebar_open(!sidebar_open);
   }
 
@@ -51,7 +65,12 @@ function Navigation() {
           <li className={styles.hamburger_icon}
             onClick={() => set_sidebar_open(!sidebar_open)}
           >
-            <Hamburger_icon fill={'white'} height={20} width={20} />
+            { sidebar_open &&
+              <Hamburger_icon fill={'white'} height={20} width={20} />
+            }
+            { !sidebar_open &&
+              <Close_icon fill={'white'} height={20} width={20} />
+            }
           </li>
         </div>
         
@@ -73,8 +92,8 @@ function Navigation() {
             <FormattedMessage id = "navbar.faq" />
           </div>
         </Link>
-        <div className={styles.navigation_item} onClick={close_sidebar}> 
-          <FormattedMessage id = "navbar.lang" />
+        <div className={styles.navigation_item} onClick={toggle_language_selection}> 
+            <FormattedMessage id = "navbar.lang" />
         </div>
       </div>
     </div>
