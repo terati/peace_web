@@ -25,12 +25,12 @@
   -ms-user-select: none;
   user-select: none;
   p {
-    padding-right: 100px;
+    // padding-right: 100px;
     font-size: 20px;
   }
 }
 .opened {
-  max-height: 200px;
+  max-height: 500px;
 }
 .closed {
   max-height: 0px;

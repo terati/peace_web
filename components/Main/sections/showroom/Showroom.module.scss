@@ -14,7 +14,7 @@
   grid-template-columns: 4fr 3fr;
   place-items: start;
 
-  padding: 0 100px;
+  padding: 0px 100px;
   height: 80vh;
   min-height: 600px;
   // width: 100%;
@@ -122,14 +122,15 @@
 
 @media screen and (max-width: 1100px) {
   .showroom_h2 {
-    padding: 10px;
+    font-size: 60px;
+    padding: 20px;
   }
   .showroom_wrapper {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     height: fit-content;
-    padding: 0px 10px 0 0!important; 
+    padding: 0px 10px 0 10px !important; 
     .showroom_inner_left {
       display: grid;
       grid-template-columns: 4fr 3fr;
@@ -140,9 +141,13 @@
     }
     .showroom_inner_right {
       padding: 0;
+      border-radius: 10px;
       .showroom_right_item_duplicate {
         display: grid !important;
       }
+    }
+    .showroom_right_item:hover img {
+      transform: none !important;
     }
   }
 }

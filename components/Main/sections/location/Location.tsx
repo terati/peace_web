@@ -13,7 +13,7 @@ function Location() {
 
   return (
     <div className={styles.location_wrapper}>
-      <h2> 
+      <h2 className={styles.h2_location_wrapper_heading}> 
         <FormattedMessage id="main.location.h2" />
       </h2>
       <div className={styles.location_map} ref={ref}>

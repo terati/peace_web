@@ -91,7 +91,7 @@ function Main() {
               <h2>
                 <FormattedMessage id = "main.main_top_left_p1" />
               </h2>
-              <p>
+              <p className={styles.p_phone_number}>
                 <FormattedMessage id = "main.main_top_left_phone" />
               </p>
 

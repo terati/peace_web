@@ -29,6 +29,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 10px;
     img {
       border-radius: 20px;
       max-width: 100%;
@@ -87,7 +88,12 @@
 
 @media screen and (max-width: 600px) { 
   .location_wrapper {
-    padding: 100px 0 !important;
+    margin: 30px 0 !important;
+    padding: 30px 0 !important;
+    .h2_location_wrapper_heading {
+      font-size: 60px;
+      padding: 20px;
+    }
   }
   .location_float_bar {
     border-radius: 20px !important;

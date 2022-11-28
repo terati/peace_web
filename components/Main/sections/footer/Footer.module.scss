@@ -46,7 +46,7 @@
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   .footer {
     padding: 20px 0;
   }
@@ -54,16 +54,19 @@
   .footer_div {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   .footer_div_left {
     padding: 20px;
   }
   .footer_div_right { 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0 0px;
+    max-width: 300px;
+    flex-wrap: wrap;
     .footer_div_right_items:not(:last-child)::after {
-      content: '';
+      content: '|';
     }
   }
   
