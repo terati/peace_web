@@ -13,6 +13,7 @@ import {
   store_set_lang_state 
 } from '../../../reducers/lang_reducer';
 import Close_icon from './Close_icon';
+import Chinese_logo from './Chinese_logo';
 
 function Navigation() {
   const lang = useSelector((state: RootState) => state.lang ?? "");
@@ -32,12 +33,13 @@ function Navigation() {
   return (
     <div className={styles.navbar_wrapper}>
       <ul className={styles.navbar_ul}>
-      <div className={styles.right_mobile_nav}>
+      <div className={styles.right_mobile_nav} style={{width: 40}}>
         {/* mobile corner right remains empty for now*/}
       </div>
         <div>
           <li className={styles.title}><Link href={`#`}><div> 
-            <FormattedMessage id = "navbar.title" />
+            {/* <FormattedMessage id = "navbar.title" /> Test */}
+            <Chinese_logo fill={"white"} width={150} height={20} />
             </div></Link>
           </li>
           <li className={styles.item}><Link href={`/#section_main_services`}><div>

@@ -48,13 +48,17 @@
     display: block;
     padding: 10px 10px;
     font-weight: bold; 
+    box-sizing: border-box;
   }
   li:not(:first-child) {
-    text-decoration: underline 0.2em rgb(0, 0, 0);
+    border-bottom: 0px solid black;
+    // text-decoration: underline 0.2em rgb(0, 0, 0);
     // transition: text-decoration-color 100ms;
   }
   li:not(:first-child):hover {
-    text-decoration-color: rgb(255, 255, 255);
+    color: rgb(37, 92, 232);
+    border-bottom: 5px solid rgb(37, 92, 232);
+    // text-decoration-color: rgb(255, 255, 255);
   }
   .hamburger_icon {
     display: none;

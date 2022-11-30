@@ -27,6 +27,11 @@
     .blog_footer_option {
       // padding: 0px 20px;
     }
+    .blog_footer_option:hover {
+      text-decoration: underline solid 2px white;
+      // font-weight: bold;
+      cursor: pointer;
+    }
     .blog_footer_option:not(:last-child)::after {
       content: '|';
       padding: 20px;
