@@ -16,7 +16,7 @@ function Blogpost_footer() {
             
           </div>
 
-          <p> © 2022 和平药房。 版权所有。 </p>
+          <p> © 2023 和平药房。 版权所有。 </p>
           <span className={styles.logo}>
           </span>
           <div className={styles.blog_footer_options_wrapper}> 
