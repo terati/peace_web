@@ -31,6 +31,10 @@
   "main.faq.d2" : "You can, but not encouraged. It is encouraged to pick a consistent pharmacy chain/store to utilize. Most pharmacies do not communicate with each other and use different computer systems. This can lead to potentially dangerous drug interactions between certain medications taken concurrently. An exception is the reporting of controlled substances which all pharmacies by law communicate to the US DEA(Drug Enforcement Agency). ",
   "main.faq.q3" : "How can I transfer from another pharmacy to yours?",
   "main.faq.d3" : "Call or visit your old pharmacy to request a Rx transfer. Provide the contact information of the desired pharmacy if they do not have it already. Ask your doctor to forward prescriptions to your new pharmacy of choice. ",
+  "main.faq.q4" : "Do you carry sell chinese medicine and/or herbs?",
+  "main.faq.d4" : "We only carry Western medicine here prescribed by doctors, nurses, and other healthcare professionals licensed in the US. ",
+  "main.faq.q5" : "Do you take card or just cash?",
+  "main.faq.d5" : "Yes, we take most credit cards in addition to cash.",
 
   "main.process.h2" : "Process",
   "main.process.p" : "Call use at (312) 842-2500 if you have any questions. ",

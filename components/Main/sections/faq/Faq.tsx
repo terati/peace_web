@@ -12,7 +12,7 @@ function Faq(props: faq_props) {
     id,
   } = props;
   const add_border = {
-    'border-top': '2px solid grey'
+    'borderTop': '2px solid grey'
   }
   return (
     <div id={"section_main_faq"} className={styles.faq_wrapper}>
@@ -21,9 +21,13 @@ function Faq(props: faq_props) {
       </h1>
 
       <Slider 
+        header={<FormattedMessage id = "main.faq.q4" />}
+        description={<FormattedMessage id = "main.faq.d4" />}
+        style={add_border}
+      />
+      <Slider 
         header={<FormattedMessage id = "main.faq.q1" />}
         description={<FormattedMessage id = "main.faq.d1" />}
-        style={add_border}
       /> 
       <Slider 
         header={<FormattedMessage id = "main.faq.q2" />}
@@ -32,7 +36,12 @@ function Faq(props: faq_props) {
       <Slider 
         header={<FormattedMessage id = "main.faq.q3" />}
         description={<FormattedMessage id = "main.faq.d3" />}
-      /> 
+      />  
+      <Slider 
+        header={<FormattedMessage id = "main.faq.q5" />}
+        description={<FormattedMessage id = "main.faq.d5" />}
+      />
+      
     </div>
   )
 }
