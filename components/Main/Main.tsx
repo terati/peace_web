@@ -75,7 +75,7 @@ function Main() {
             { title_with_lang }
             {/* <FormattedMessage id = "main.main_top_left_p1" /> */}
           </title>
-          <meta name={ title_with_lang } content={ title_with_lang } />
+          {/* <meta name={ title_with_lang } content={ title_with_lang } /> */}
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navigation />

@@ -1,5 +1,5 @@
 
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import { MDXProvider } from '@mdx-js/react'
 import { Mdx_components } from '../components/mdx_components';
@@ -17,8 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <Provider store={store}>
           <Helmet>
             <meta charSet="utf-8" />
-            <meta name="name" content="安康藥房 Peace Pharmacy" />
-            <meta name="description" content="Website for Chicago Peace Pharmacy"/>
+            <meta name="name" content="Peace Pharmacy 安康藥房 " />
+            <meta name="description" content="We Peace Pharmacy, your local Pharmacy in the heart of Chicago's Chinatown"/>
           </Helmet>
           <MDXProvider components={Mdx_components}>
             <Component {...pageProps} />

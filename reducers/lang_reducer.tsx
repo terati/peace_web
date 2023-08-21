@@ -13,7 +13,7 @@ let dt: {[key: string]: string} = {
 
 const langSlice = createSlice({
   name: 'lang',
-  initialState: 'zh',
+  initialState: 'en',
   reducers: {
     lang_toggle(state) {
       console.log('toggle');

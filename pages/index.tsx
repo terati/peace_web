@@ -15,13 +15,14 @@ const Home: NextPage = () => {
     <Provider store={store}>
       <Helmet>
         <meta charSet="utf-8" />
-        <meta name="name" content="安康藥房 Peace Pharmacy" />
-        <meta name="description" content="Website for Chicago Peace Pharmacy"/>
-        <meta name="og:description" content="Website for Chicago Peace Pharmacy"/>
+        <meta name="name" content="Peace Pharmacy 安康藥房 " />
+        <meta name="description" content="We Peace Pharmacy, your local Pharmacy in the heart of Chicago's Chinatown"/>
+        <meta name="og:description" content="We Peace Pharmacy, your local Pharmacy in the heart of Chicago's Chinatown"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-        <meta http-equiv="”content-language”" content="”en-US”"></meta>
         <meta http-equiv="content-language" content="en-us"></meta>
+        <meta name="_csrfHeader" content="X-XSRF-TOKEN"></meta>
         <meta name="google-site-verification" content="XETCqDUhxJbODAPBLgeafVwNy_kBnZkjNvoNoR5V6eA"/>
+        <title> Peace Pharmacy 安康藥房 </title>
       </Helmet>
       <div className={styles.container}>
         <Main />

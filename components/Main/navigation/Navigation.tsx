@@ -7,7 +7,7 @@ import {
 import Link from 'next/link';
 import Hamburger_icon from './Hamburger_icon';
 import { RootState } from '../../../store/store';
-import { Language_dropdown } from './language_dropdown';
+import { Language_dropdown } from './_language_dropdown';
 import { 
   lang_toggle, 
   store_set_lang_state 
