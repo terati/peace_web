@@ -6,7 +6,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Main } from '../components/Main';
 import { Helmet } from 'react-helmet';
-
+import { Analytics } from '@vercel/analytics/react';
+ 
 import { Provider, useSelector } from 'react-redux';
 import { store } from '../store/store';
 
@@ -25,6 +26,7 @@ const Home: NextPage = () => {
         <title> Peace Pharmacy 安康藥房 </title>
       </Helmet>
       <div className={styles.container}>
+        <Analytics />
         <Main />
       </div>
       
