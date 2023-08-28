@@ -15,6 +15,8 @@ const ResponsiveImage = (props: any) => {
       width={100}
       height={60}
       layout={"responsive"}
+      placeholder="blur"
+      blurDataURL={props.src}
       style={im_styles}
       // sizes="(max-width: 800px) 100vw,
       //         (max-width: 10000px) 50vw"

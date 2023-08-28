@@ -53,6 +53,9 @@ function Process(props: process_props) {
                 src={"/insurance.jpg"}
                 layout="fill"
                 objectFit="cover"
+                placeholder="blur"
+                blurDataURL={"/insurance.jpg"}
+                alt="New visitor requirements image"
               />
             </div>
           </div>
@@ -90,6 +93,9 @@ function Process(props: process_props) {
                 src={"/family.jpg"} 
                 layout="fill"
                 objectFit="cover"
+                placeholder="blur"
+                blurDataURL={"/family.jpg"}
+                alt="Returning visitor requirements image"
               />
             </div>
             

@@ -82,12 +82,15 @@ function Main() {
         <div className={styles.main_top}>
           <div className={styles.main_top_left}>
             <div className={styles.main_top_left_inner_wrapper}>
-              <div>
-                <Logo fill={"black"} width={"100%"} height={190}/>
+              <div className={styles.logo_wrapper}>
+                <Logo fill={"black"} height={120}/>
               </div>
               {/* <h1>
                 <FormattedMessage id = "main.main_top_left_h1" />
               </h1> */}
+              <h1>
+                Peace Pharmacy 
+              </h1>
               <h2>
                 <FormattedMessage id = "main.main_top_left_p1" />
               </h2>

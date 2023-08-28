@@ -46,7 +46,7 @@ function BlogPost(props:BlogPost_Props_Interface) {
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if(entry.isIntersecting) {
-          console.log(entry.target.id);
+          // console.log(entry.target.id);
           set_current_section(entry.target.id);
           // console.log(entry);
           // setCnt(prev => prev+1);
@@ -88,7 +88,8 @@ function BlogPost(props:BlogPost_Props_Interface) {
                   alt={meta.alt}
                   width={100}
                   height={60}
-                  layout={"responsive"}
+                  layout={"fill"}
+                  objectFit='cover'
                   className={styles.main_image}
                 />
               </div>

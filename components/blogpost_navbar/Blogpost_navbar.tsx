@@ -5,13 +5,15 @@ import styles from './Blogpost_navbar.module.scss';
 
 function Blogpost_navbar() {
   return (
-    <div className={styles.blogpost_navbar_wrapper}>
-      <div className={styles.blogpost_navbar_inner}>
-        <Link href="/">
-          <Logo fill="white" height={"50px"} width={"200px"}/>
-        </Link>
+    <nav>
+      <div className={styles.blogpost_navbar_wrapper}>
+        <div className={styles.blogpost_navbar_inner}>
+          <Link href="/">
+            <Logo fill="white" height={"50px"} width={"100%"}/>
+          </Link>
+        </div>
       </div>
-    </div>
+    </nav>
   )
 }
 

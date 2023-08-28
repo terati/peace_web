@@ -1,0 +1,77 @@
+.about_wrapper {
+  min-height: 500px;
+  margin: 5rem 10rem;
+  max-width: 1500px;
+  margin-bottom: 200px;
+ 
+  .headline {
+    width: 100%;
+    background-image: url('/pharmacy_about.jpg');
+    background-position: bottom right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 500px;
+    h1 {
+    font-size: 4rem;
+    }
+    p {
+      font-size: 2rem;
+      max-width: 600px;
+    }
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  .staff {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+       font-size: 4rem;
+    }
+    .staff_card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 50px;
+      .profile_photo {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: black;
+        background-image: url('/default_avatar.jpg');
+        background-position: 50% 50%;
+        background-size: contain;
+      }
+      .profile_name {
+        font-size: 2.0;
+      }
+      .profile_title { font-size: 1.4rem; margin: 0; }
+      .profile_title {
+        
+      }
+      p {
+        font-size: 1.5rem;
+        font-family: Nunito;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .about_wrapper {
+    margin: 1rem;
+    .headline {
+      min-height: 100vh !important;
+      h1 {
+        font-size: 3rem !important;
+      }
+    }
+  }
+}

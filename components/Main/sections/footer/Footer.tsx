@@ -24,7 +24,7 @@ function Footer() {
           </div>
           
           <div>
-            <Logo fill={"white"} />
+            <Logo fill={"white"} height={80} />
             <p>
               © <FormattedMessage id = "footer.copyright" />
             </p>

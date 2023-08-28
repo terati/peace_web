@@ -1,0 +1,51 @@
+import { BlogPost } from '/components/blogpost';
+
+
+export const meta = {
+  title: 'Understanding a Prescription Label',
+  description: 'Understanding a prescription label',
+  date: '07/30/2023',
+  readTime: 3,
+  author: 'Tim W',
+  src: '/blog_images/prescription-label-zoomed-out.jpg',
+  alt: 'prescription label',
+  lang: 'en',
+  contents: [
+    {
+      title: 'The Prescription Label',
+      src: 'the-prescription-label',
+    },
+  ],
+}
+
+## The Prescription Label.
+
+  Prescription labels may vary from pharmacy to pharmacy but most prescription labels have the same information. Below is an example label design from Peace Pharmacy. 
+
+    1. Pharmacy Logo and pharmacy information to reference to call for refills. 
+    2. Rx number: The unique number your prescription is assigned by the pharmacy. You will need this number when you call a pharmacy for a refill.
+    3. Last name, First Name of the patient the prescription belongs to
+    4. Prescription instructions translation (optional)
+    5. Prescription instructions in English
+    6. Drug and dosage: The name of medication (whether generic or brand names) and how strong each tablet / capsule is 
+    7. Quantity: the number of pills/capsules dispensed
+    8. Number of refills: The number of refills you can get of the medicine. Ask your healthcare provider to write a new prescription if you need more of the medication and you have 0 refills left.
+    9. Name of Doctor: The person who prescribed you the medication. It helps to know who to contact if you have 
+    questions or a new prescription. 
+    10. Patient Address
+    11. Prescription fill date : this is the date that this particular prescription was filled
+    12. Barcode 
+    13. Manufacturing company of medication
+    14. Written date of the original prescription: the date that the prescriber wrote / sent the prescription
+    15. Insurance plan (if available) that helped cover the medication
+    16. Additional warning / information labels
+
+  If you are not sure how to read the label on your medications, ask your healthcare provider or pharmacist for help. 
+
+  When you recieve your prescription, check the labels of your prescription to verify that the medication is indeed yours. Pharmacies work hard to verify and ensure that hundreds of medication are dispensed  
+  correctly and to the right person daily but mistakes can still happen.
+
+export default ({ children }) => <BlogPost meta={meta}> {children} </BlogPost>
+
+
+

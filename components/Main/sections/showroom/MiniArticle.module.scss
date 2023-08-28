@@ -1,0 +1,38 @@
+.mini_article {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+    }
+    
+    .mini_article_photo_wrapper {
+        position: relative;
+        height: 70%;
+        width: 100%;
+        padding: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: center;
+        justify-content: center;
+        img {
+            -webkit-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            transition: transform .5s;
+            
+        }
+        
+    }
+    h2 {
+        padding: 1rem;
+        font-size: 1.8rem;
+        &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+}

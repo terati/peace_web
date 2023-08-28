@@ -4,10 +4,12 @@
   margin: 0;
 }
 .major_showroom_wrapper {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  height: fit-content;
 }
 .showroom_wrapper {
   display: grid;
@@ -15,7 +17,7 @@
   place-items: start;
 
   padding: 0px 100px;
-  height: 80vh;
+  // height: 80vh;
   min-height: 600px;
   // width: 100%;
   // max-width: 1200px;

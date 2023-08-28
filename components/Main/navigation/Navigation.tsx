@@ -37,9 +37,13 @@ function Navigation() {
         {/* mobile corner right remains empty for now*/}
       </div>
         <div>
-          <li className={styles.title}><Link href={`#`}><div> 
+          <li className={styles.title}><Link href={`/`}><div> 
             {/* <FormattedMessage id = "navbar.title" /> Test */}
             <Chinese_logo fill={"white"} width={150} height={20} />
+            </div></Link>
+          </li>
+          <li className={styles.item}><Link href={`/about`}><div>
+            <FormattedMessage id = "navbar.about" />
             </div></Link>
           </li>
           <li className={styles.item}><Link href={`/#section_main_services`}><div>

@@ -36,6 +36,9 @@
     h3 {
       margin: 10px;
     }
+    > div:last-child {
+      margin-top: auto;
+    }
   }
   .process_inner_wrapper_right {
     display: flex;
@@ -50,6 +53,9 @@
     background-color: white;
     h3 {
       margin: 10px; 
+    }
+    > div:last-child {
+      margin-top: auto;
     }
   }
 }

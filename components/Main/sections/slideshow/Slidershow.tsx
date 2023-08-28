@@ -27,7 +27,7 @@ function Slideshow() {
         set_classNames("animation_reverse");
       }
       set_slide_dir(prev => !prev);
-    }, 5000);
+    }, 10_000);
     return () => clearInterval(id);
 
   }, [cur_im_idx, slide_dir]);
@@ -48,22 +48,24 @@ function Slideshow() {
           onAnimationEnd={onAnimationEnd}
         >
           <div className={styles.slideshow_inner_images}>
-            <img src={ims[im1]} alt="Logo" height={600}/>
+            <img src={ims[im1]} alt="Logo" height={500}/>
           </div>
           <div className={styles.slideshow_inner_images}>
-            <img src={ims[im2]} alt="Logo" height={600}/>
+            <img src={ims[im2]} alt="Logo" height={500}/>
           </div>
           
         </div>
       </div>
       <div className={styles.mobile_static_image}>
         <div className={styles.module_static_image_inner_wrapper}>
-          <p> Ello World </p>
+          {/* <p> Ello World </p> */}
           <Image 
             src={ims[0]} 
-            alt="pharmacy"
+            alt="pharmacy_photo_reel"
             layout="fill"
             objectFit="cover"
+            placeholder="blur"
+            blurDataURL={ims[0]}
           />
         </div>
        

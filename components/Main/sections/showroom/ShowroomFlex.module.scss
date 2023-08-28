@@ -1,0 +1,27 @@
+// mobile view that displays all articles in a straight column
+.flex_mobile_view {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  width: 100%;
+  // background-color: rgb(10, 58, 214);
+  margin: 0rem 2rem;
+  .articleFlex {
+    display: block;
+    width: 100%;
+    height: 600px;
+    border-radius: 20px;
+    border: 2px solid black;
+    overflow: hidden;
+    margin: 1rem 0;
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  .flex_mobile_view {
+    display: none !important;
+  }
+}
+
+

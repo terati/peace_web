@@ -1,0 +1,70 @@
+import { BlogPost } from '/components/blogpost';
+
+
+export const meta = {
+  title: 'Getting a Prescription Filled',
+  description: 'Getting a prescription filled',
+  date: '07/30/2023',
+  readTime: 3,
+  author: 'Tim W',
+  src: '/blog_images/pharmacist.jpg',
+  alt: 'Getting a prescription filled',
+  lang: 'en',
+  contents: [
+    {
+      title: 'Receiving a Prescription',
+      src: 'receiving-a-prescription',
+    },
+    {
+      title: 'To help the pharmacist fill the prescription',
+      src: 'to-help-the-pharmacist-fill-the-prescription',
+    },
+  ],
+}
+
+## Receiving a Prescription
+
+  When you see a health care provider, they may prescribe you medication if they deem it necesary. This prescription may be given in different forms which include: 
+
+  * Writing a paper prescription that you take to a local pharmacy.
+
+  * Calling or emailing a pharmacy to order the medicine.
+
+  * Sending your prescription to the pharmacy by the way of a computer that is linked to the provider's electronic medical record (EMR)
+
+  * Faxing a copy of the prescription to a local pharmacy.
+
+  If the prescription is not a paper prescription, you may tell the provider the pharmacy of your choice to send to have the prescription filled.
+  The health care professional may prescribe prescription medication but also over the counter (OTC) medicine.
+  In the US, prescription medication is regulated medicine that can only be obtained with a prescription by a licensed medical professional. This medicine is locked up in a room in a pharmacy. Over the counter medicine (OTC) are deemed safer 
+  and can be bought without a prescription. These are the medicine that you see at store aisles such as Tylenol and Aspirin. Some medicine are classified as having a prescription and OTC version. This means that the 
+  medicine has the same ingredient but the higher strengh/dosage version would be classified as Prescription medication. For example, Ibuprofen can be over the counter typically at a strength of 200 mg per tablet.
+  Prescription Ibuprofen with strengths of 600 and 800 mg per tablet require a prescription. Other similar examples include Naproxen(Aleve), Loperamide, and Omeprazole. 
+  
+  You can pay for all of your medicine yourself but especially in the US, medicine can be expensive. Most Americans have insurance. You will need to find out if your health plan will pay for the medicine your provider prescribed. Most insurance will cover common prescription medicine. 
+  
+  * Certain types or brands of medicine may not be covered by a plan. Most plans will not cover OTC medicine.
+
+  * Many health plans require you to pay the pharmacy a portion of the cost of the prescription price. This is called a co-pay. This is dictated by your insurance plan rather than your pharmacy.
+
+  Some people may have more than one insurance plan. Some individuals qualify for both Medicare, a federal program for individuals over 65, and Medicaid, a state federal program for low-income individuals. 
+  Some also pay for supplementary insurance to provide extra coverage. So be sure you are aware of your different insurance plans to maximize coverage since your pharmacist may not be aware of multiple coverage. 
+
+## To help the pharmacist fill the prescription:
+
+  * If you are a new visitor to the pharmacy:
+    * Bring your Identification Card (ID) and/or get ready to provide identifying information.
+    * Bring your insurance card(s)
+    * Bring paper prescription and/or make sure provider sent prescription to the pharmacy of your choice.
+
+  * If you are a returning visitor: 
+    * Provide, name, date of birth.
+    * The prescription number, name of the medicine, or an idea of what you want refilled.
+
+  If you are a returning visitor, you may call in ahead of time to have your refills filled ahead of time to reduce wait time. 
+  
+
+export default ({ children }) => <BlogPost meta={meta}> {children} </BlogPost>
+
+
+
