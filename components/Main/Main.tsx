@@ -83,12 +83,12 @@ function Main() {
           <div className={styles.main_top_left}>
             <div className={styles.main_top_left_inner_wrapper}>
               <div className={styles.logo_wrapper}>
-                <Logo fill={"black"} height={120}/>
+                <Logo className={styles.logo} fill={"black"} height={120}/>
               </div>
               {/* <h1>
                 <FormattedMessage id = "main.main_top_left_h1" />
               </h1> */}
-              <h1>
+              <h1 className={styles.peace_pharmacy_h2}>
                 Peace Pharmacy 
               </h1>
               <h2>
@@ -171,6 +171,7 @@ function Main() {
                 </div> */}
 
               </div>
+              <div className={styles.mobile_illustration}> </div>
             </div>
           </div>
           <div className={styles.main_top_right}>

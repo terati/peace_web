@@ -103,10 +103,10 @@
   // flex-grow: 1;
 }
 
-@media screen and (max-width: 1000px) { 
+@media screen and (max-width: 1200px) { 
   .process_wrapper {
     width: 100%;
-    padding: 20px 10px;
+    padding: 0 1rem;
     padding-top: 30px;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,7 @@
     }
   }
   .process_img_wrapper {
-    min-height: 300px;
+    min-height: 500px;
   }
   .process_inner_wrapper {
     display: flex;
@@ -177,4 +177,13 @@
     font-size: 20px;
     // flex-grow: 1;
   }
+}
+
+@media screen and (max-width: 600px) { 
+  .process_wrapper {
+  }
+  .process_img_wrapper {
+    min-height: 200px !important;
+  }
+
 }

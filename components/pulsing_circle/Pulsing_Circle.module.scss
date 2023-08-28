@@ -1,5 +1,7 @@
 .pulsing_circle_wrapper {
   position: relative;
+  width: 20px;
+  height: 20px;
 }
 
 .pulsing_circle_open {
@@ -7,8 +9,6 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(50%);
-  width: 30px;
-  height: 30px; 
 
 
   &:before {
@@ -44,8 +44,8 @@
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(50%);
-  width: 30px;
-  height: 30px; 
+  width: 10px;
+  height: 10px; 
   &:before {
     content: '';
     display: none;
