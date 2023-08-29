@@ -54,7 +54,7 @@ function Navigation() {
             <FormattedMessage id = "navbar.process" />
             </div></Link>
           </li>
-          <li className={styles.item}><Link href={`/#section_main_faq`}><div> 
+          <li className={styles.item}><Link href={`/faq`}><div> 
             <FormattedMessage id = "navbar.faq" />
             </div></Link>
           </li>
@@ -83,6 +83,11 @@ function Navigation() {
       </ul>
 
       <div className={`${styles.sidebar_right} ${sidebar_open ? styles.sidebar_opened : styles.sidebar_closed}`}>
+        <Link href={`/about`} >
+          <div className={styles.navigation_item} onClick={close_sidebar}> 
+            <FormattedMessage id = "navbar.about" />
+          </div>
+        </Link>
         <Link href={`/#section_main_services`} >
           <div className={styles.navigation_item} onClick={close_sidebar}> 
             <FormattedMessage id = "navbar.services" />
@@ -93,7 +98,7 @@ function Navigation() {
             <FormattedMessage id = "navbar.process" />
           </div>
         </Link>
-        <Link href={`/#section_main_faq`}>
+        <Link href={`/faq`}>
           <div className={styles.navigation_item} onClick={close_sidebar}> 
             <FormattedMessage id = "navbar.faq" />
           </div>

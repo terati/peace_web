@@ -5,6 +5,7 @@ import styles from './Slider.module.scss';
 
 function Slider(props:any) {
   const {
+    key,
     header,
     description,
     ...rest
@@ -14,6 +15,7 @@ function Slider(props:any) {
   return (
     <>
       <div className={styles.slider_wrapper}
+        key={key}
         onClick={() => set_open(!open)}
         {...rest}
       >

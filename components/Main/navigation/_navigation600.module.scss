@@ -10,7 +10,13 @@
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
-
+    li:focus {
+      border: 2px blue dotted !important;
+    }
+    li:not(:first-child):hover {
+      border-bottom: none !important;
+      // text-decoration-color: rgb(255, 255, 255);
+    }
     li {
       float: left;
       display: block;
