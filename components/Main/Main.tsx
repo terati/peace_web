@@ -147,29 +147,6 @@ function Main() {
                       <FormattedMessage id = "main.sun_times" />
                     </div>
                   </div>
-                {/* <div className={styles.business_hours_days}>
-                  <div> 
-                    <FormattedMessage id = "main.mon_to_fri" />
-                  </div>
-                  <div> 
-                    <FormattedMessage id = "main.sat" />
-                  </div>
-                  <div> 
-                    <FormattedMessage id = "main.sun" />
-                  </div>
-                </div>
-                <div className={styles.business_hours_times}>
-                  <div> 
-                    <FormattedMessage id = "main.mon_to_fri_times" />
-                  </div>
-                  <div> 
-                    <FormattedMessage id = "main.sat_times" />
-                  </div>
-                  <div> 
-                    <FormattedMessage id = "main.sun_times" />
-                  </div>
-                </div> */}
-
               </div>
               <div className={styles.mobile_illustration}> </div>
             </div>

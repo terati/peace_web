@@ -23,9 +23,12 @@ function Slider(props:any) {
           <div>
             <h2> { header } </h2>
           </div>
-          <div className={`${styles.arrow_icon} ${open ? styles.icon_flipped : styles.icon_not_flipped}`}>
-            <Down_arrow_icon fill={'black'} width={25} height={25} />
-          </div>
+          <button className={styles.dropdown_button}>
+            <div className={`${styles.arrow_icon} ${open ? styles.icon_flipped : styles.icon_not_flipped}`}>
+              <Down_arrow_icon fill={'black'} width={25} height={25} />
+            </div>
+          </button>
+          
         </div>
           <div className={`${styles.slider_dropdown} ${open ? styles.opened : styles.closed}`}
           >

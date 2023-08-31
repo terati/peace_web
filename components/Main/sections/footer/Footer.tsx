@@ -23,8 +23,8 @@ function Footer() {
             </a>
           </div>
           
-          <div>
-            <Logo fill={"white"} height={80} />
+          <div className={styles.logo_wrapper }>
+            <Logo className={styles.logo_mobile} fill={"white"} height={80} />
             <p>
               © <FormattedMessage id = "footer.copyright" />
             </p>

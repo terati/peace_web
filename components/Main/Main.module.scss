@@ -10,7 +10,7 @@
   overflow-x: hidden;
   .main_top_left {
     width: 40%;
-    min-width: 50%;
+    // min-width: 50%;
     max-width: 900px;
     display: flex;
     flex-direction: column;
@@ -152,6 +152,7 @@
 .main_services_wrapper {
   position: relative;
   width: 100%;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 70px 0;
 }
@@ -215,7 +216,7 @@
 
 
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   .main_top {
     display: flex;
     flex-direction: column;
@@ -231,6 +232,7 @@
       width: 100%;
       height: 100%;
       padding: 10px;
+      margin: 0 !important;
       .main_top_left_inner_wrapper {
         display: flex;
         flex-direction: column;
@@ -294,36 +296,36 @@
         font-size: 40px;
       }
     }
-    .main_services_right {
-      display: flex;
-      flex-direction: column;
-      padding: 0px;
-      .main_services_right_items {
-        display: flex;
-        flex-direction: row;
-        padding: 1rem 0;
-        .main_services_right_items_left_icon {
-          width: 60px;
-          display: flex;
-          justify-content: center;
-          padding: 10px;
-          margin: 0 2rem;
-        }
-        .main_services_right_items_right_content {
-          display: flex;
-          flex-direction: column;
-          flex-grow: 1;
-          h2 {
-            font-size: 30px;
-            margin: 5px;
-          }
-          p {
-            font-size: 20px;
-            margin: 5px;
-          }
-        }
-      }
-    }
+    // .main_services_right {
+    //   display: flex;
+    //   flex-direction: column;
+    //   padding: 0px;
+    //   .main_services_right_items {
+    //     display: flex;
+    //     flex-direction: row;
+    //     padding: 1rem 0;
+    //     .main_services_right_items_left_icon {
+    //       width: 60px;
+    //       display: flex;
+    //       justify-content: center;
+    //       padding: 10px;
+    //       margin: 0 2rem;
+    //     }
+    //     .main_services_right_items_right_content {
+    //       display: flex;
+    //       flex-direction: column;
+    //       flex-grow: 1;
+    //       h2 {
+    //         font-size: 30px;
+    //         margin: 5px;
+    //       }
+    //       p {
+    //         font-size: 20px;
+    //         margin: 5px;
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 
@@ -361,7 +363,7 @@
       justify-content: center;
       // width: 100%;
       height: 100%;
-      margin: 2rem !important;
+      // margin: 2rem !important;
       // background-image: url('/pharmacy_primary_illustration.jpg');
       // background-position: bottom;
       // background-size: contain;
@@ -398,6 +400,30 @@
     .main_top_right {
       display: none !important;
       // flex-grow: 1;
+    }
+  }
+
+  .main_services_left {
+    // margin: 1rem !important;
+    padding: 1rem !important;
+    h1 { 
+      font-size: 2rem; 
+      
+    }
+  }
+  .main_services_right {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .main_services_right_items {
+    
+    .main_services_right_items_left_icon {
+      width: 3.5rem !important;
+      margin: .6rem !important;
+    }
+    .main_services_right_items_right_content {
+      h2 { font-size: 1.4rem !important; }
+      p { font-size: 1rem !important; }
     }
   }
 }

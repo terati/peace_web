@@ -31,11 +31,12 @@ function Navigation() {
   }
 
   return (
+    <>
     <div className={styles.navbar_wrapper}>
       <ul className={styles.navbar_ul}>
-      <div className={styles.right_mobile_nav} style={{width: 40}}>
-        {/* mobile corner right remains empty for now*/}
-      </div>
+        <div className={styles.right_mobile_nav} style={{width: 40}}>
+          {/* mobile corner right remains empty for now*/}
+        </div>
         <div>
           <li className={styles.title}><Link href={`/`}><div> 
             {/* <FormattedMessage id = "navbar.title" /> Test */}
@@ -68,20 +69,23 @@ function Navigation() {
             {/* </div> */}
           </li>
           
-          <li className={styles.hamburger_icon}
-            onClick={() => set_sidebar_open(!sidebar_open)}
-          >
-            { sidebar_open &&
-              <Hamburger_icon fill={'white'} height={20} width={20} />
-            }
-            { !sidebar_open &&
-              <Close_icon fill={'white'} height={20} width={20} />
-            }
+          { <li className={styles.hamburger_button_li}>
+            <button
+              className={styles.hamburger_button}
+              onClick={() => set_sidebar_open(!sidebar_open)}  
+            >
+              { sidebar_open &&
+                <Hamburger_icon fill={'white'} height={20} width={20} />
+              }
+              { !sidebar_open &&
+                <Close_icon fill={'white'} height={20} width={20} />
+              }
+            </button>
           </li>
+          }
         </div>
         
       </ul>
-
       <div className={`${styles.sidebar_right} ${sidebar_open ? styles.sidebar_opened : styles.sidebar_closed}`}>
         <Link href={`/about`} >
           <div className={styles.navigation_item} onClick={close_sidebar}> 
@@ -108,6 +112,10 @@ function Navigation() {
         </div>
       </div>
     </div>
+    { !sidebar_open && <div className={styles.blur_bound}
+        onClick={() => set_sidebar_open(!sidebar_open)}
+      > </div> }
+    </>
   )
 }
 
