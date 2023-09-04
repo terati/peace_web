@@ -37,7 +37,7 @@ function Navigation() {
         <div className={styles.right_mobile_nav} style={{width: 40}}>
           {/* mobile corner right remains empty for now*/}
         </div>
-        <div>
+        <div className={styles.navigation}>
           <li className={styles.title}><Link href={`/`}><div> 
             {/* <FormattedMessage id = "navbar.title" /> Test */}
             <Chinese_logo fill={"white"} width={150} height={20} />
@@ -62,7 +62,7 @@ function Navigation() {
         </div>
         {/* language selection */}
         <div className={styles.navigation_bar_right}>
-          <li className={`${styles.item} ${styles.language_dropdown_positioning}`}> 
+          <li className={` ${styles.language_dropdown_positioning}`}> 
             {/* <div>  */}
               <Language_dropdown />
               {/* <FormattedMessage id = "navbar.faq" /> */}

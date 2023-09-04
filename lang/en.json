@@ -88,6 +88,15 @@
   "faq.q8" : "Why did is my copay different this time? Why is my copay different than some else's? Are you overcharging me?",
   "faq.d8" : "Your amount of copay is decided by your insurance, not the pharmacy. We are contractually obligated to charge the exact amount your insurance tells us to charge. There should be a phone number on your insurance card if you have questions and concerns about your copay.",
 
+  "contact.title.h1" : "Contact Us",
+  "contact.firstName" : "First Name",
+  "contact.lastName" : "Last Name",
+  "contact.email" : "Email",
+  "contact.phone" : "Phone",
+  "contact.message" : "Message",
+  "contact.chars" : "chars",
+  "contact.submit" : "Submit",
+
   "footer.copyright" : "2023 Peace Pharmacy. All Rights Reserved.",
   "footer.site_map" : "Site Map",
   "footer.terms_and_conditions": "Terms and Conditions",

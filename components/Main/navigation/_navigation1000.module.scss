@@ -44,22 +44,30 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
+  align-items: center !important;
+  .navigation {
+    display: flex;
+    align-items: center;
+    box-sizing: inherit;
+  }
   li {
     float: left;
     display: block;
     padding: 10px 10px;
     font-weight: bold; 
     box-sizing: border-box;
+    // border-bottom: 5px solid white;
   }
   li:not(:first-child) {
-    border-bottom: 0px solid black;
+    // border-bottom: 0px solid black;
     // text-decoration: underline 0.2em rgb(0, 0, 0);
     // transition: text-decoration-color 100ms;
   }
   li:not(:first-child):hover {
     color: rgb(37, 92, 232);
-    border-bottom: 5px solid rgb(37, 92, 232);
+    
+    // border-bottom: 5px solid rgb(37, 92, 232);
+    border-radius: 2px;
     // text-decoration-color: rgb(255, 255, 255);
   }
   .hamburger_icon {
@@ -73,6 +81,11 @@
 .item {
   display: none;
   width: fit-content;
+  border-top: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+.item:hover {
+  border-bottom-color: rgb(37, 92, 232) !important;
 }
 
 .navigation_bar_right {

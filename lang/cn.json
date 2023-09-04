@@ -88,6 +88,15 @@
   "faq.q8" : "为什么这次我的共付额不同？ 为什么我的共付额与其他人的不同？ 你对我收费过高吗？",
   "faq.d8" : "您的自付额由您的保险决定，而不是由药房决定。 根据合同规定，我们有义务按照您的保险要求我们收取的确切金额收取费用。 如果您对自付额有疑问和疑虑，您的保险卡上应该有一个电话号码。",
 
+  "contact.title.h1" : "联系我们",
+  "contact.firstName" : "名",
+  "contact.lastName" : "姓",
+  "contact.email" : "电子邮件",
+  "contact.phone" : "电话",
+  "contact.message" : "留言",
+  "contact.chars" : "字符",
+  "contact.submit" : "提交",
+
 
   "footer.copyright" : "2023 和平药房。 版权所有。",
   "footer.site_map" : "站点地图",

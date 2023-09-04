@@ -38,6 +38,8 @@ function Location() {
               layout="fill"
               objectFit="cover"
               objectPosition={"50% 50%"}
+              placeholder="blur"
+              blurDataURL={"/map_dark_annotated.PNG"}
               alt={"Map of peace pharmacy"}
             />
           </a>

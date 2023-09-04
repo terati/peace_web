@@ -1,0 +1,146 @@
+.contact_wrapper {
+  display: flex;
+  flex-direction: column;
+  // margin: 5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 5rem 0;
+  .contact_title {
+    display: none;
+    font-size: 3rem;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1400px;
+  // padding: 0 4rem;
+  justify-content: center;
+  border-radius: 10px;
+  // background-color: red;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+}
+
+.image_background {
+  position: relative;
+  width: 80%;
+  // background-color: blue;
+  overflow: hidden;
+  border-radius: 10px;
+  h1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    z-index: 2;
+    padding: 2rem;
+    font-size: 3rem;
+  }
+  .gradient_background {
+    
+  }
+}
+
+.contact_side {
+  width: 100%;
+  padding: 1rem 4rem;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column; 
+}
+.asterisk {
+  color: red;
+}
+
+.form_group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  width: 100%;
+  font-family: Nunito;
+  label{
+    margin: 5px 0;
+  }
+  input, textarea {
+    border-radius: 10px;
+    border: 2px solid rgb(221, 221, 221);
+    background-color: white;
+    color: black;
+    padding: .6rem 1rem;
+    font-size: 1rem;
+    font-family: inherit;
+    &:focus {
+      border: 2px solid rgb(221, 221, 221);
+      outline: 2px solid black;
+      outline-offset: -2px;
+    }
+  }
+  .numChars {
+    font-size: .8rem;
+    margin: .4rem 0;
+    color: rgb(85, 85, 85);
+  }
+}
+.name_group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .form_group {
+    width: 100% !important;
+  }
+  >:first-child {
+    margin-right: 1rem;
+  }
+}
+.submit {
+  border: none;
+  box-sizing: border-box;
+  padding: 20px 20px;
+  background-color: black;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: auto;
+  cursor: pointer;
+  &:focus, &:hover {
+    outline: 2px dashed white;
+    outline-offset: -3px;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .contact_wrapper {
+    margin: 0rem;
+    .contact_title {
+      display: block;
+      font-size: 3rem;
+    }
+  }
+  .form_group {
+    width: 100% !important;
+  }
+  .contact_side {
+    margin: 0 !important;
+    padding: 1rem !important;
+  }
+  .name_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .form_group {
+      // width: 100% !important;
+    }
+    >:first-child {
+      margin-right: 0 !important;
+    }
+  }
+  .image_background {
+    display: none !important;
+  }
+}
