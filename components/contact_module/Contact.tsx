@@ -13,14 +13,8 @@ function Contact() {
     charCnt: '',
     phoneNumber: '',
   });
-  // const [firstName, setFirstName] = React.useState('');
-  // const [lastName, setLastName] = React.useState('');
-  // const [email, setEmail] = React.useState('');
-  // const [message, setMessage] = React.useState(''); 
-  // const [charCnt, setCharCnt] = React.useState(0);
-  // const [phoneNumber, setPhoneNumber] = React.useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {name, value} = e.target;
     setFormData({
       ...formData,
@@ -28,15 +22,15 @@ function Contact() {
     })
   }
 
-  const txtAreaChange = (e:any) => {
+  const txtAreaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
-      charCnt: e.target.value.length,
+      charCnt: ''+e.target.value.length,
       message: e.target.value,
     });
   } 
   const intl = useIntl();
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     try {
       const response = await fetch('/api/contact', {

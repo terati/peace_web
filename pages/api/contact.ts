@@ -11,7 +11,6 @@ export default async (
 ): Promise<void> => {
   if (req.method==='POST') {
     try {
-      console.log(req.body);
       const { firstName, lastName, email, message, charCnt, phoneNumber } = JSON.parse(req.body);
       const transporter = nodemailer.createTransport({
           service: 'Gmail',
@@ -27,13 +26,9 @@ export default async (
         text: req.body
       };
       const ans = await transporter.sendMail(mailOptions).then((res) => {
-        console.log(res);
       })
-      console.log(ans);
-      console.log("success");
       res.status(200);
     } catch{
-      console.log("fail");
       res.status(500).json({error: 'Internal server error'});
     }
   }
