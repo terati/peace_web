@@ -4,6 +4,7 @@
   "navbar.services" : "Services",
   "navbar.process" : "Process",
   "navbar.faq" : "FAQ",
+  "navbar.contact" : "Contact",
   "navbar.lang" : "中文",
   "main.main_top_left_h1" : "Proudly Serving You",
   "main.main_top_left_p1" : "Your local community pharmacy in the heart of Chicago's Chinatown.  ",
@@ -96,6 +97,9 @@
   "contact.message" : "Message",
   "contact.chars" : "chars",
   "contact.submit" : "Submit",
+  "contact.submitting" : "Submitting...",
+  "contact.successMsg" : "Thank you for contacting us!",
+  "contact.failureMsg" : "Error. Please try again later.",
 
   "footer.copyright" : "2023 Peace Pharmacy. All Rights Reserved.",
   "footer.site_map" : "Site Map",

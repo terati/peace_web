@@ -27,7 +27,9 @@ export default async (
       };
       const ans = await transporter.sendMail(mailOptions).then((res) => {
       })
-      res.status(200);
+      res.status(200).json({
+        status: 'success'
+      });
     } catch{
       res.status(500).json({error: 'Internal server error'});
     }

@@ -4,6 +4,7 @@
   "navbar.services" : "服务",
   "navbar.process" : "程序",
   "navbar.faq" : "常问问题",
+  "navbar.contact" : "联系",
   "navbar.lang" : "English",
   "main.main_top_left_h1" : "自豪地为您服务",
   "main.main_top_left_p1" : "位于芝加哥唐人街中心的当地药店",
@@ -96,7 +97,9 @@
   "contact.message" : "留言",
   "contact.chars" : "字符",
   "contact.submit" : "提交",
-
+  "contact.submitting" : "提交中...",
+  "contact.successMsg" : "谢谢您与我们联系！",
+  "contact.failureMsg" : " 错误。请稍后再试。",
 
   "footer.copyright" : "2023 和平药房。 版权所有。",
   "footer.site_map" : "站点地图",

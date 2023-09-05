@@ -2,6 +2,8 @@ import * as React from 'react';
 import Image from 'next/image';
 import { FormattedMessage, useIntl } from 'react-intl';
 import styles from './Contact.module.scss';
+import { Spinner } from './spinner';
+import { truncate } from 'fs';
 
 
 function Contact() {
@@ -10,8 +12,13 @@ function Contact() {
     lastName: '',
     email: '',
     message: '',
-    charCnt: '',
+    charCnt: '0',
     phoneNumber: '',
+  });
+  const [formSubmitStatus, setFormSubmitStatus] = React.useState<{formSubmitted: Boolean, loading: boolean, error: boolean}>({
+    formSubmitted: false,
+    loading: false,
+    error: false
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -32,16 +39,36 @@ function Contact() {
   const intl = useIntl();
   const handleSubmit = async (e:any) => {
     e.preventDefault();
+    setFormSubmitStatus({
+      formSubmitted: true,
+      loading: true,
+      error: false
+    });
     try {
-      const response = await fetch('/api/contact', {
+      await fetch('/api/contact', {
         method: 'POST',
-        // headers: {
-        //   'Content-Type': 'application/json'
-        // },
         body: JSON.stringify(formData)
-      }); 
+      }).then((res) => {
+        if (res.ok) {  
+          setFormSubmitStatus({
+            formSubmitted: true,
+            loading: false,
+            error: false
+          });
+        } else {
+          setFormSubmitStatus({
+            formSubmitted: true,
+            loading: false,
+            error: true
+          });
+        }
+      })
     } catch {
-
+      setFormSubmitStatus({
+        ...formSubmitStatus,
+        loading: false,
+        error: true
+      })
     }
   };
   return (
@@ -62,7 +89,22 @@ function Contact() {
             />
           </div>
           <div className={styles.contact_side}>
-            <form className={styles.contact_form} onSubmit={handleSubmit}>
+            { formSubmitStatus.formSubmitted && <div className={styles.form_status}> 
+              { formSubmitStatus.loading && <div>
+                  <Spinner />
+                  <p> <FormattedMessage id="contact.submitting" /> </p>
+                </div> }
+              { !formSubmitStatus.loading && !formSubmitStatus.error && <div>
+                  <img src={"/success.jpg"} height={150}/>
+                  <h2> <FormattedMessage id="contact.successMsg" /> </h2>  
+                </div> }
+              { !formSubmitStatus.loading && formSubmitStatus.error && <div>
+                <img src={"/failure.jpg"} height={150}/>
+                  <h2> <FormattedMessage id="contact.failureMsg" /> </h2>
+                </div> }
+            </div> }
+
+            { !formSubmitStatus.formSubmitted &&<form className={styles.contact_form} onSubmit={handleSubmit}>
               <div className={styles.name_group}>
                 <div className={styles.form_group}>
                   <label htmlFor="firstName"><FormattedMessage id="contact.firstName" /> <span className={styles.asterisk}>*</span></label>
@@ -138,7 +180,7 @@ function Contact() {
               </div>
 
               <button type={'submit'} className={styles.submit}> <FormattedMessage id="contact.submit"/> </button>    
-            </form>
+            </form> }
           </div>
         </div>
       </div>

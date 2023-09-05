@@ -59,6 +59,10 @@ function Navigation() {
             <FormattedMessage id = "navbar.faq" />
             </div></Link>
           </li>
+          <li className={styles.item}><Link href={`/contact`}><div> 
+            <FormattedMessage id = "navbar.contact" />
+            </div></Link>
+          </li>
         </div>
         {/* language selection */}
         <div className={styles.navigation_bar_right}>
@@ -107,7 +111,12 @@ function Navigation() {
             <FormattedMessage id = "navbar.faq" />
           </div>
         </Link>
-        <div className={styles.navigation_item} onClick={toggle_language_selection}> 
+        <Link href={`/contact`}>
+          <div className={styles.navigation_item} onClick={close_sidebar}> 
+            <FormattedMessage id = "navbar.contact" />
+          </div>
+        </Link>
+        <div className={`${styles.lang_toggle} ${styles.navigation_item}`} onClick={toggle_language_selection}> 
             <FormattedMessage id = "navbar.lang" />
         </div>
       </div>

@@ -71,12 +71,15 @@
     width: 100%;
     padding: 20px 10px;
     // border-top: 1px solid white;
-    border-top: 1px solid rgb(68, 68, 68); 
-    border-bottom: 1px solid rgb(68, 68, 68); 
+    // border-top: 1px solid rgb(68, 68, 68); 
+    border-bottom: 1px solid rgb(54, 54, 54); 
+  }
+  .lang_toggle {
+    border-top: 1px solid rgb(54, 54, 54); 
   }
   .navigation_item:last-child {
     position: absolute;
-    bottom: 40px;
+    bottom: 0px;
   }
 
   .blur_bound {
