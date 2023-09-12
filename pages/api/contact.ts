@@ -28,12 +28,12 @@ export default async (
             <p> Message: ${message} </p>
           </body>
         </html>
-      `
+      `;
       const mailOptions = {
         from: 'junkMailer990@gmail.com',
         to: 'junkMailer990@gmail.com',
         subject: 'Form Submission',
-        text: req.body
+        html: htmlContent
       };
       const ans = await transporter.sendMail(mailOptions).then((res) => {
       })
