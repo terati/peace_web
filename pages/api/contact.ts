@@ -19,6 +19,16 @@ export default async (
             pass: process.env.EMAIL_PW
           }
       });
+      const htmlContent = `
+        <html>
+          <body>
+            <p> First Name: ${firstName} </p>
+            <p> Last Name: ${lastName} </p>
+            <p> Phone Number: ${phoneNumber} </p>
+            <p> Message: ${message} </p>
+          </body>
+        </html>
+      `
       const mailOptions = {
         from: 'junkMailer990@gmail.com',
         to: 'junkMailer990@gmail.com',
