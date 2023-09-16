@@ -17,8 +17,10 @@ const Home: NextPage = () => {
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="name" content="Peace Pharmacy 安康藥房 " />
-        <meta name="description" content="We Peace Pharmacy, your local Pharmacy in the heart of Chicago's Chinatown"/>
-        <meta name="og:description" content="We Peace Pharmacy, your local Pharmacy in the heart of Chicago's Chinatown"/>
+        <meta name="description" content="We are Peace Pharmacy, your local Pharmacy in the heart of Chicago's Chinatown"/>
+        <meta name="og:description" content="We are Peace Pharmacy, your local Pharmacy in the heart of Chicago's Chinatown"/>
+        <meta name="keywords" content="peace pharmacy, chicago peace pharmacy, chicago pharmacy, peace pharmacy chicago" />
+        <meta name="robots" content="index, follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <meta http-equiv="content-language" content="en-us"></meta>
         <meta name="_csrfHeader" content="X-XSRF-TOKEN"></meta>
