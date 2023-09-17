@@ -16,7 +16,7 @@ const langSlice = createSlice({
   initialState: 'en',
   reducers: {
     lang_toggle(state) {
-      console.log('toggle');
+      // console.log('toggle');
       if (state == 'zh') {
         return (state = 'en');
       } else if (state == 'en') {
@@ -24,7 +24,7 @@ const langSlice = createSlice({
       }
     },
     store_set_lang_state(state, action: PayloadAction<string>) {
-      console.log('lang_set');
+      // console.log('lang_set');
       if (dt[action.payload]) {
         return (state = dt[action.payload])
       }

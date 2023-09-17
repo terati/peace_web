@@ -51,6 +51,12 @@ function Main() {
   const title_with_lang:string = (lang == 'zh') ? '安康藥房' : 'Peace Pharmacy';
 
   React.useEffect(() => {
+    const userPreferredLanguage = navigator.language; 
+    const isChinese = userPreferredLanguage.startsWith('zh');
+    if (isChinese) dispatch(lang_toggle());
+  }, [])
+
+  React.useEffect(() => {
     async function fetchDate() {
       if ((day>0 && day<6 && hour>=9 && ((hour<17) || (hour==17&&min<=30)) ) ||
           (day==6 && hour>=9 && hour<13) 

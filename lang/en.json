@@ -89,6 +89,9 @@
   "faq.q8" : "Why did is my copay different this time? Why is my copay different than some else's? Are you overcharging me?",
   "faq.d8" : "Your amount of copay is decided by your insurance, not the pharmacy. We are contractually obligated to charge the exact amount your insurance tells us to charge. There should be a phone number on your insurance card if you have questions and concerns about your copay.",
 
+  "banner.p" : "This site uses strictly necessary cookies to analze traffic and improve the browsing experience. By remaining on this site, you agree to these terms.",
+  "banner.button" : "Agree",
+
   "contact.title.h1" : "Contact Us",
   "contact.firstName" : "First Name",
   "contact.lastName" : "Last Name",

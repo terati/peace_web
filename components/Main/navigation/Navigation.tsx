@@ -12,11 +12,13 @@ import {
   lang_toggle, 
   store_set_lang_state 
 } from '../../../reducers/lang_reducer';
+import { cookieBannerToggle } from '../../../reducers/showCookieReducer';
 import Close_icon from './Close_icon';
 import Chinese_logo from './Chinese_logo';
 
 function Navigation() {
   const lang = useSelector((state: RootState) => state.lang ?? "");
+  const showCookieBanner = useSelector((state: RootState) => state.showCookieBanner ?? true); 
   const dispatch = useDispatch();
   const [sidebar_open, set_sidebar_open] = React.useState(true);
 
@@ -33,6 +35,11 @@ function Navigation() {
   return (
     <>
     <div className={styles.navbar_wrapper}>
+      { showCookieBanner && <div className={styles.cookie_banner}> 
+          <p> <FormattedMessage id = "banner.p" /> </p> 
+          <button onClick={() => dispatch(cookieBannerToggle())}> <FormattedMessage id = "banner.button" /> </button>
+        </div>
+      }
       <ul className={styles.navbar_ul}>
         <div className={styles.right_mobile_nav} style={{width: 40}}>
           {/* mobile corner right remains empty for now*/}

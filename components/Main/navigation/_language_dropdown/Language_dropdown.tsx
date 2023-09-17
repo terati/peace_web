@@ -13,7 +13,7 @@ function Language_dropdown() {
   const lang = useSelector((state:RootState) => state.lang ?? "");
   const dispatch = useDispatch();
 
-  const [dropdown_lang, set_dropdown_lang] = React.useState("中文");
+  const [dropdown_lang, set_dropdown_lang] = React.useState("English");
   const [open, set_open] = React.useState<Boolean>(false);
   const dropdownRef = React.useRef<HTMLButtonElement>(null);
 
@@ -52,7 +52,7 @@ function Language_dropdown() {
               <div className={styles.globe_wrapper}>
                 <Globe_icon fill={"white"} height={15} />
               </div>
-              {dropdown_lang} 
+              <p> {dropdown_lang} </p>
               { open &&
                 <div className={styles.dropdown_div}>
                   <div className={styles.dropdown_choice}
