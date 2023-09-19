@@ -11,9 +11,9 @@ import * as React from 'react';
 import { Provider, useSelector } from 'react-redux';
 import { store } from '../store/store';
 import getConfig from 'next/config';
-const { publicRuntimeConfig } = getConfig();
+// const { publicRuntimeConfig } = getConfig();
 
-const ogImageUrl = `${publicRuntimeConfig.basePath}/peace_pharmacy_icon.PNG`;
+const ogImageUrl = `/peace_pharmacy_icon.PNG`;
 
 const Home: NextPage = () => {
 
