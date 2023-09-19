@@ -9,8 +9,7 @@ import Hamburger_icon from './Hamburger_icon';
 import { RootState } from '../../../store/store';
 import { Language_dropdown } from './_language_dropdown';
 import { 
-  lang_toggle, 
-  store_set_lang_state 
+  lang_toggle,
 } from '../../../reducers/lang_reducer';
 import { cookieBannerToggle } from '../../../reducers/showCookieReducer';
 import Close_icon from './Close_icon';
@@ -28,7 +27,6 @@ function Navigation() {
 
   const toggle_language_selection = () => {
     dispatch(lang_toggle());
-    // dispatch(store_set_lang_state("en"));
     set_sidebar_open(!sidebar_open);
   }
 

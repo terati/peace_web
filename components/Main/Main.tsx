@@ -8,7 +8,6 @@ import { IntlProvider } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import { lang_toggle } from '../../reducers/lang_reducer';
-// import { store_set_lang_state } from '../../reducers/lang_reducer';
 import { setLang } from '../../reducers/lang_reducer';
 import { useRouter } from 'next/router';
 import Care_Icon from './icons/Care_Icon';

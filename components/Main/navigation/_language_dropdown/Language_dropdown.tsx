@@ -5,7 +5,7 @@ import {
   useSelector, 
   useDispatch 
 } from 'react-redux';
-import { store_set_lang_state } from '../../../../reducers/lang_reducer';
+import { setLang } from '../../../../reducers/lang_reducer';
 import { RootState } from '../../../../store/store';
 
 
@@ -24,12 +24,12 @@ function Language_dropdown() {
 
   const english_selection_click_handler = () => {
     set_dropdown_lang("English");
-    dispatch(store_set_lang_state("en"));
+    dispatch(setLang("en"));
   }
 
   const chinese_selection_click_handler = () => {
     set_dropdown_lang("中文");
-    dispatch(store_set_lang_state("zh"));
+    dispatch(setLang("zh"));
   }
 
   const input_blur_handler = () => {
