@@ -8,7 +8,8 @@ import { IntlProvider } from 'react-intl';
 import { useDispatch, useSelector } from 'react-redux';
 import Link from 'next/link';
 import { lang_toggle } from '../../reducers/lang_reducer';
-import { store_set_lang_state } from '../../reducers/lang_reducer';
+// import { store_set_lang_state } from '../../reducers/lang_reducer';
+import { setLang } from '../../reducers/lang_reducer';
 import { useRouter } from 'next/router';
 import Care_Icon from './icons/Care_Icon';
 import Medicine_Icon from './icons/Medicine_Icon';
@@ -35,7 +36,7 @@ function Main() {
 
   const toggle_lang_click = () => {
     // dispatch(lang_toggle());
-    dispatch(store_set_lang_state('en'))
+    dispatch(setLang('en'))
     // console.log(lang);
     // router.push(`${lang}`);
   }
