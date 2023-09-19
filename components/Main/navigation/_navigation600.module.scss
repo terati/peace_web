@@ -4,6 +4,22 @@
     // display: fixed !important;
     // top: 0;
     // z-index: 1s !important;
+    .cookie_banner {
+      font-size: 1rem;
+      padding: .4rem 1rem;
+      button {
+        margin: .4rem;
+        border: none;
+        padding: 1rem;
+        border-radius: 20px;
+        background-color: rgb(37, 92, 232);
+        text-wrap: nowrap;
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(25, 55, 129);
+        }
+      }
+    }
   }
   .navbar_ul {
     position: relative;
@@ -95,6 +111,7 @@
   }
 
   .sidebar_right {
+    position: relative;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -105,7 +122,7 @@
     bottom: 0;
     width: 250px;
     transition: all .3s ease;
-    z-index: 2;
+    z-index: 10;
     .navigation_item:hover {
       background-color: rgb(37, 92, 232);
       cursor: pointer;
