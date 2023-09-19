@@ -23,7 +23,7 @@ const langSlice = createSlice({
         return (state = 'zh');
       }
     },
-    store_set_lang_state(state, action: PayloadAction<string>) {
+    setLang(state, action: PayloadAction<string>) {
       // console.log('lang_set');
       if (dt[action.payload]) {
         return (state = dt[action.payload])
@@ -32,5 +32,5 @@ const langSlice = createSlice({
   }
 })
 
-export const { lang_toggle, store_set_lang_state } = langSlice.actions;
+export const { lang_toggle, setLang } = langSlice.actions;
 export default langSlice.reducer; 
