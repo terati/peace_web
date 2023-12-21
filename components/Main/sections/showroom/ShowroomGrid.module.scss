@@ -12,7 +12,8 @@ $grid_padding: 1rem;
     padding: 0 5rem;
     .showcase_article {
         position: relative;
-        background-color: red;
+        // background-color: red;
+        border: 1px solid black;
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1;
