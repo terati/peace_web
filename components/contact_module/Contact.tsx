@@ -156,7 +156,7 @@ function Contact() {
                   autoComplete='tel'
                   placeholder={intl.formatMessage({id: 'contact.phone'})}
                   value={formData.phoneNumber}
-                  pattern="[0-1]{10}"
+                  // pattern="[0-1]{10}"
                   onChange={handleChange}
                 />
               </div>

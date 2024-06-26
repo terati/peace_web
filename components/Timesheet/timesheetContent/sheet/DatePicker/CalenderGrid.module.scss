@@ -1,0 +1,169 @@
+.calenderGrid {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 400px;
+  justify-content: center;
+  padding: 1rem;
+  .month {
+    display: block;
+    // position: absolute;
+  }
+  .dayMarks {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 25px;
+  }
+  .days {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .day {
+    position: relative;
+    display: flex;
+    flex: '1';
+    width: calc(100% / 7);
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 28px;
+    border-radius: 50%;
+    p {
+      margin: 0;
+      z-index: 2;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+    }
+    &:hover {
+      &::before {
+        background-color: rgb(65, 65, 65);
+      }
+      cursor: pointer;
+    }
+  }
+  .selectedDay {
+    background-color: rgb(65, 65, 65);
+  }
+  .emptyDay {
+    position: relative;
+    display: flex;
+    flex: '1';
+    width: calc(100% / 7);
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    height: 26px;
+    border-radius: 50%;
+  }
+
+  .topControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    .yearSelector {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        border-radius: 50%;
+        height: 26px;
+        width: 26px;
+        // margin: 0 1rem;
+        background-color: rgba(0,0,0, 0);
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(61, 61, 61);
+        }
+      };
+    }
+    .monthSelector {
+      display: flex;
+      flex-direction: row;
+      button {
+        border: none;
+        background-color: rgba(0,0,0, 0);
+        border-radius: 50%;
+        height: 26px;
+        width: 26px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover {
+          cursor: pointer;
+          background-color: rgb(61, 61, 61);
+        }
+      }
+    }
+  }
+
+  .innerWrapper {
+    position: relative;
+    height: 100%;
+    // height: 260px;
+  }
+
+  .yearDropdown {
+    position: absolute;
+    display: flex;
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+    // background-color: blue;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    justify-content: space-between;
+    .yearOption {
+      padding: 3px 0;
+      flex: 1 1 30%;
+      text-align: center;
+      border-radius: 10px;
+      &:hover {
+        background-color: rgb(43, 43, 43);
+        cursor: pointer;
+      }
+    }
+    .selectedYear {
+      background-color: rgb(65, 65, 65);
+    }
+    &:focus {
+      border: 1px solid white;
+    }
+  }
+  .hidden {
+    visibility: hidden !important;
+  }
+
+  .bottomControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 0 0 0;
+    button {
+      border: none;
+      background-color: rgba(0,0,0, 0);
+      &:hover {
+        cursor: pointer;
+        color: rgb(59, 59, 167);
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.dateHeaderInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  // margin
+  h2 { margin: 0; font-size: 3rem;
+  }
+
+  .weekday > p {
+    margin: 0;
+  }
+  .day > p {
+    margin: 0;
+  }
+}
+
+// .weekdayMonth {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   p {
+//     margin: 0;
+//   }
+// }

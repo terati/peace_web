@@ -1,0 +1,19 @@
+.timeEvent {
+  display: flex;
+  border-radius: 10px;
+  background-color: rgb(54, 54, 54);
+  padding: 1rem;
+  min-width: 100px;
+  border-left: 4px solid rgb(69, 69, 214);
+  
+  p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  &:hover {
+    background-color: rgb(31, 31, 31);
+    cursor: pointer;
+  }
+}

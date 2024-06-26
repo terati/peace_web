@@ -1,0 +1,93 @@
+.selectWrapper {
+  position: relative;
+  width: 100%;
+  height: 32px;
+
+  input {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 0;
+    border: none;
+    border: solid 1px rgba(232, 230, 227, 0.88);
+    background-color: var(--aphotic-gray);
+    box-shadow: none;
+    &:focus, &:hover {
+      border-color: var(--aphotic-blue);
+      outline: solid 1px rgba(65, 65, 65, 0.404);
+    }
+    
+  }
+}
+.select:focus + .carrot {
+  transform: rotatY(180deg);
+}
+.carrot {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.options {
+  position: absolute;
+  width: 100%;
+  min-height: 100px;
+  max-height: 300px;
+  background-color: rgb(36, 36, 36);
+  border-radius: 8px;
+  z-index: 5;
+  overflow: auto;
+  .option {
+    padding: 5px;
+    border-radius: 10px;
+    min-height: 30px;
+    align-items: center;
+    &:hover {
+      background-color: rgb(14, 14, 14);
+    }
+  }
+}
+
+
+.select-enter {
+  transform-origin: top;
+  opacity: 0;
+  // height: 0%;
+  transform: scaleY(0.6);
+}
+.select-enter-active {
+  transform-origin: top;
+  opacity: 1;
+  // height: 100%;
+  transform: scaleY(1);
+  transition: opacity 300ms, transform 300ms;
+}
+.select-enter {
+  transform-origin: top;
+  opacity: 1;
+  // height: 100%;
+  transform: scale(0.9);
+}
+.select-enter-active {
+  transform-origin: top;
+  opacity: 1;
+  // height: 50%;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+.select-exit {
+  transform-origin: top;
+  opacity: 1;
+}
+.select-exit-active {
+  transform-origin: top;
+  opacity: 0;
+  // height: 50%;
+  transform: scaleY(0.6);
+  transition: opacity 300ms, transform 300ms;
+}

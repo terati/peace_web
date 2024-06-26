@@ -106,16 +106,17 @@ function BlogPost(props:BlogPost_Props_Interface) {
               
               <div className={styles.div_inner_content_sidebar}> 
                 <h2> {meta.lang=="en" ? "Contents" : "内容"} </h2>
-                { meta.contents?.map((item) => {
+                { meta.contents?.map((item,idx) => {
                     return (
-                      <>
-                        <div className={`${styles.div_inner_content_sidebar_navigation_items} 
-                                        ${(item.src==current_section) ? styles.div_inner_content_sidebar_navigation_items_current_section : ""}`}>
-                          <Link href={`#${item.src}`}>
-                            {item.title}
-                          </Link>
-                        </div>
-                      </>
+                      <div className={`${styles.div_inner_content_sidebar_navigation_items} 
+                                      ${(item.src==current_section) ? styles.div_inner_content_sidebar_navigation_items_current_section : ""}`}
+                            key={idx}
+                      >
+                        <Link href={`#${item.src}`}>
+                          {item.title}
+                        </Link>
+                      </div>
+
                     )
                 }) }
               </div>

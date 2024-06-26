@@ -1,0 +1,18 @@
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  // background-color: black;
+  margin: 5px 5px;
+  height: 30px; 
+}
+
+
+.active {
+  background-color: #649e25;
+}
+
+.inactive {
+  background-color: #b50811;
+}

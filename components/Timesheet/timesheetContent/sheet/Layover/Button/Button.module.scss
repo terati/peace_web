@@ -1,0 +1,26 @@
+
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 15px;
+  height: 32px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--aphotic-blue);
+  font-family: inherit;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(20, 20, 20);
+  }
+
+  
+}
+
+.rounded {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}

@@ -1,0 +1,15 @@
+.wrapper {
+  width: 100%;
+  min-height: calc(100vh - 50px);
+  // padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  padding: 1rem;
+  width: 100%;
+}

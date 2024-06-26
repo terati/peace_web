@@ -1,0 +1,94 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.topRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .centerControl {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .todayButton {
+      background-color: black;
+      margin: 0 10px;
+      &:hover {
+        background-color: rgb(56, 56, 56);
+      }
+    }
+    
+  }
+}
+
+.secondaryRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .selectionOptions {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.gridWrapper {
+  display: flex;
+  width: 100%;
+  background-color: black;
+  // height: 100px;
+  overflow: auto;
+}
+
+.arrow {
+  background-color: black;
+  margin: 0 10px;
+  width: 40px;
+  // padding: 20px; 
+  height: 30px;
+}
+
+$grid-border-color: #000;
+$grid-border-width: 1px;
+$grid-border-style: solid;
+
+.timeTable {
+  width: 100%;
+  min-width: 800px;
+  gap: 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  .timeTableHeader {
+    td {
+      padding: 1rem;
+      height: 2rem;
+
+    }
+    >.membersHeader {
+      border-right: $grid-border-width $grid-border-style $grid-border-color;
+      border-bottom: $grid-border-width $grid-border-style $grid-border-color;
+    }
+    >.headerDates {
+      position: relative;
+      border-right: $grid-border-width $grid-border-style $grid-border-color;
+      border-bottom: $grid-border-width $grid-border-style $grid-border-color;
+    }
+  }
+  
+}
+
+.todayLine {
+  position: absolute;
+  width: 1px;
+  // height: 100%;
+  background-color: red;
+  top: 0;
+  left: 100px;
+  bottom: 0;
+}

@@ -11,11 +11,17 @@ import * as React from 'react';
 import { Provider, useSelector } from 'react-redux';
 import { store } from '../store/store';
 import getConfig from 'next/config';
+import { Profiler } from 'react';
 // const { publicRuntimeConfig } = getConfig();
 
 const ogImageUrl = `/peace_pharmacy_icon.PNG`;
 
 const Home: NextPage = () => {
+
+  // function onRender(id, phase, actualDuration, baseDuration, startTime, commitTime) {
+  //   // Aggregate or log render timings...
+  //   console.log("Actual Duration: " + actualDuration);
+  // }
 
   return (
     <Provider store={store}>
@@ -33,10 +39,12 @@ const Home: NextPage = () => {
         <meta name="og:image" content={ogImageUrl}></meta>
         <title> Peace Pharmacy 安康藥房 </title>
       </Helmet>
-      <div className={styles.container}>
-        <Analytics />
-        <Main />
-      </div>
+      {/* <Profiler id="App" onRender={onRender}> */}
+        <div className={styles.container}>
+          <Analytics />
+          <Main />
+        </div>
+      {/* </Profiler> */}
       
     
     </Provider>

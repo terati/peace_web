@@ -1,0 +1,22 @@
+
+.textareaWrapper {
+  position: relative;
+  width: 100%;
+  // height: 32px;
+  textarea {
+    font-family: Nunito;
+    width: 100%;
+    // height: 100%;
+    margin: 10px 0;
+    padding: 4px 11px;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px rgba(232, 230, 227, 0.88);
+    background-color: var(--aphotic-gray);
+    box-shadow: none;
+    &:focus, &:hover {
+      border-color: var(--aphotic-blue);
+      outline: solid 1px rgba(65, 65, 65, 0.404);
+    }
+  }
+}

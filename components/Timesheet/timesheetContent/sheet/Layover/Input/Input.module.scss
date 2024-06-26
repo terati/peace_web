@@ -1,0 +1,23 @@
+.wrapper {
+  input {
+    padding: 0 10px;
+    height: 32px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    border: solid 1px rgba(232, 230, 227, 0.88);
+    background-color: var(--aphotic-gray);
+    box-shadow: none;
+    &:focus, &:hover {
+      border-color: var(--aphotic-blue);
+      outline: solid 1px rgba(65, 65, 65, 0.404);
+    }
+  }
+}
+
+
+.invalid {
+  outline: solid 1px red;
+  // border: solid 
+}
+

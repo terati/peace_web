@@ -64,7 +64,7 @@ function AboutModule() {
           
           { staff_arr.map((idv, idx) => {
               return (
-                <div className={styles.staff_card}>
+                <div className={styles.staff_card} key={idx}>
                   <div className={styles.profile_photo}> </div>
                   <p className={styles.profile_name}> {idv.name} </p>
                   <p className={styles.profile_title}> {idv.title} </p>

@@ -1,0 +1,18 @@
+.searchfilterButton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  border: none;
+  margin: 0 10px;
+  background-color: black;
+  color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+  }
+  p {
+    margin: 0;
+  }
+}

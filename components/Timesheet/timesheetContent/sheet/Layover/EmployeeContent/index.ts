@@ -1,0 +1,1 @@
+export { default as EmployeeContent } from './EmployeeContent';
