@@ -5,6 +5,8 @@ import Logo from '../../icons/Logo';
 import Link from 'next/link';
 
 function Footer() {
+  const currentDate = new Date();
+  const currentYear = currentDate.getFullYear(); 
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_div}>
@@ -26,7 +28,7 @@ function Footer() {
           <div className={styles.logo_wrapper }>
             <Logo className={styles.logo_mobile} fill={"white"} height={80} />
             <p>
-              © <FormattedMessage id = "footer.copyright" />
+              © { currentYear } <FormattedMessage id = "footer.copyright" />
             </p>
             
           </div>
