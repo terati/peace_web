@@ -47,7 +47,7 @@ const BarcodeTranslator = () => {
     setMmyy(expirationDate.substring(2, 4) + expirationDate.substring(0, 2));
   };
 
-  const copyToClipboard = (val: string) => {
+  const copyToClipboard = (val: any) => {
     try {
       navigator.clipboard.writeText(val);
     } catch {}
