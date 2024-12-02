@@ -15,7 +15,7 @@ function Downloads_Site() {
   return (
     <IntlProvider locale={lang} defaultLocale={lang} messages={(lang=='zh') ? cn : en}>
       <Navigation />
-        <Downloads />
+        {/* <Downloads /> */}
       <Footer />
     </IntlProvider>
   )

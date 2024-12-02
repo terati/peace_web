@@ -85,7 +85,8 @@ function Contact() {
               objectFit="cover"
               placeholder="blur"
               blurDataURL={"/gradient1.jpg"} 
-              objectPosition={"50% 50%"}  
+              objectPosition={"50% 50%"} 
+              alt={"gradient background"}
             />
           </div>
           <div className={styles.contact_side}>
